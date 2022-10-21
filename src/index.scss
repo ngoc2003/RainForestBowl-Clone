@@ -9,10 +9,19 @@
 }
 @layer base {
   body {
-    @apply text-base font-normal;
+    @apply text-base font-normal text-font;
     line-height: 1.5;
   }
   input {
     @apply outline-none;
   }
 } ;
+
+@layer components {
+  .wrapper{
+    @apply px-16
+  }
+  .link-hover{
+    @apply duration-300 hover:font-bold cursor-pointer
+  }
+}

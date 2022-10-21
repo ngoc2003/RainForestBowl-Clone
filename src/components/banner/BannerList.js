@@ -2,24 +2,11 @@ import React from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
 import NoteBannerItem from "./item/NoteBannerItem";
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 100,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-};
+import { EffectFade } from "swiper";
+  // import 'swiper/css/effect-fade';
 const BannerList = ({ data = [], notebanner = false, className }) => {
-  // console.log(data);
-  SwiperCore.use([Autoplay]);
+  SwiperCore.use([Autoplay, EffectFade]);
   return (
-    // <Slider {...settings}>
-    //   {data
-    //     ? notebanner
-    //       ? data.map((item) => <div key={item.id}>{item.text}</div>)
-    //       : data.map(() => <div>Hi</div>)
-    //     : ""}
-    // </Slider>
     <Swiper
       grabCursor="true"
       slidesPerView={1}
@@ -32,7 +19,7 @@ const BannerList = ({ data = [], notebanner = false, className }) => {
         ? notebanner
           ? data.map((item) => (
               <SwiperSlide key={item.id}>
-              <NoteBannerItem>{item.text}</NoteBannerItem>
+                <NoteBannerItem>{item.text}</NoteBannerItem>
               </SwiperSlide>
             ))
           : data.map(() => <SwiperSlide>Hi</SwiperSlide>)
