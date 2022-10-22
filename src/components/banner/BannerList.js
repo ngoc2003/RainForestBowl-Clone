@@ -8,7 +8,7 @@ const BannerList = ({ data = [], notebanner = false, className }) => {
   SwiperCore.use([Autoplay, EffectFade]);
   return (
     <Swiper
-      grabCursor="true"
+      // grabCursor="true"
       slidesPerView={1}
       autoplay={{
         delay: 8000,

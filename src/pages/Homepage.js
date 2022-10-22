@@ -1,11 +1,11 @@
 import React from "react";
-import NoteBanner from "../modules/topbar/NoteBanner";
+import Banner from "../modules/homepage/Banner";
 
 const Homepage = () => {
   return (
-    <div>
-      HomePage
-      {/* <NoteBanner></NoteBanner> */}
+    <div className="flex wrapper">
+      
+      <Banner></Banner>
     </div>
   );
 };

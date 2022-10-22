@@ -1,5 +1,6 @@
 import React from "react";
-import NoteBanner from "../../modules/topbar/NoteBanner";
+import NoteBanner from "../../modules/header/NoteBanner";
+import Offers from "../../modules/header/Offers";
 import Topbar from "./Topbar";
 
 const Header = () => {
@@ -7,6 +8,7 @@ const Header = () => {
     <div>
       <NoteBanner></NoteBanner>
       <Topbar></Topbar>
+      <Offers></Offers>
     </div>
   );
 };

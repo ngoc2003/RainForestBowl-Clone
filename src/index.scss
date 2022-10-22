@@ -9,7 +9,7 @@
 }
 @layer base {
   body {
-    @apply text-base font-normal text-font;
+    @apply text-base font-normal text-font font-raleway;
     line-height: 1.5;
   }
   input {
@@ -19,7 +19,7 @@
 
 @layer components {
   .wrapper{
-    @apply px-16
+    @apply px-16 
   }
   .link-hover{
     @apply duration-300 hover:font-bold cursor-pointer

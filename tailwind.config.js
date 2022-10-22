@@ -19,6 +19,8 @@ module.exports = {
         gray: "#828282",
         lightGray: "#D8D8D8",
         westar: "#E0E0D6",
+        nude2: "#F5F2F2",
+        borderColor: "rgba(226,152,86,.5)",
       },
       fontFamily: {
         raleway: ["Raleway-Medium"],
