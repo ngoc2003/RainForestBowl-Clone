@@ -15,13 +15,16 @@
   input {
     @apply outline-none;
   }
-} ;
+}
 
 @layer components {
-  .wrapper{
-    @apply px-16 
+  .wrapper {
+    @apply px-16;
   }
-  .link-hover{
-    @apply duration-300 hover:font-bold cursor-pointer
+  .link-hover {
+    @apply duration-300 hover:font-bold cursor-pointer;
+  }
+  .hover-img {
+    @apply duration-200 hover:scale-[105%];
   }
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import Button from "../../components/button/Button";
-import banner from "../../images/Banner.webp";
+import banner from "../../images/homepage/Banner.webp";
 const Banner = () => {
   return (
     <div className="flex my-8 rounded-[3px] overflow-hidden font-semibold bg-nude2 gap-x-5">
-      <div className="flex flex-col justify-center pl-12 text-3xl gap-y-4">
+      <div className="flex flex-col justify-center pl-12 pr-10 text-3xl gap-y-4">
         <span>
           One-of-a-Kind Wabi <br />
           Sabi Kitchenware <br />
