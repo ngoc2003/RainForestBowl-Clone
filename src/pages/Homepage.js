@@ -5,7 +5,7 @@ import PopularOffer from "../modules/homepage/PopularOffer";
 
 const Homepage = () => {
   return (
-    <div className="flex flex-col gap-y-13 wrapper">
+    <div className="flex flex-col gap-y-[50px] wrapper">
       <Banner></Banner>
       <PopularOffer></PopularOffer>
       <BestSellers></BestSellers>

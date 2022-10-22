@@ -2,7 +2,7 @@ import React from 'react';
 
 const PrimaryText = ({children}) => {
     return (
-        <p className= 'bg-primary text-white font-bold px-1 inline-block'>
+        <p className= 'inline-block px-1 font-bold text-white bg-primary'>
             {children}
         </p>
     );

@@ -7,7 +7,7 @@ module.exports = {
       colors: {
         primary: "#A76E65",
         secondary: "#466732",
-        third: "#683F0E", // brown
+        third: "#69451c", // brown
         nude: "#EFD7C5",
         lightNude: "#F5EBE0",
         font: "#69451C",
@@ -23,6 +23,7 @@ module.exports = {
         borderColor: "rgba(226,152,86,.5)",
       },
       fontFamily: {
+        sans: ["sans-serif"],
         raleway: ["Raleway-Medium"],
       },
     },

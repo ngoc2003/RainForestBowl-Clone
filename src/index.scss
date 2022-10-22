@@ -9,7 +9,8 @@
 }
 @layer base {
   body {
-    @apply text-base font-normal text-font font-raleway;
+    @apply text-base font-normal text-font font-sans;
+    //font-raleway
     line-height: 1.5;
   }
   input {
