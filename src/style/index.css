@@ -1,22 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-// @font-face {
-//   font-family: "Raleway";
-//   src: local("Raleway-Medium"),
-//     url("./fonts/Raleway-Medium.ttf") format("truetype");
-//   font-weight: medium;
-// }
 @layer base {
   body {
     @apply text-base font-normal text-font font-sans;
-    
   }
   input {
     @apply outline-none;
   }
 }
-
 @layer components {
   .wrapper {
     @apply px-16;
@@ -28,3 +20,5 @@
     @apply duration-200 hover:scale-[105%];
   }
 }
+
+/*# sourceMappingURL=index.css.map */
