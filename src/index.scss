@@ -1,16 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: "Raleway";
-  src: local("Raleway-Medium"),
-    url("./fonts/Raleway-Medium.ttf") format("truetype");
-  font-weight: medium;
-}
+// @font-face {
+//   font-family: "Raleway";
+//   src: local("Raleway-Medium"),
+//     url("./fonts/Raleway-Medium.ttf") format("truetype");
+//   font-weight: medium;
+// }
 @layer base {
   body {
     @apply text-base font-normal text-font font-sans;
-    //font-raleway
     line-height: 1.5;
   }
   input {
