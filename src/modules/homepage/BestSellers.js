@@ -23,7 +23,7 @@ const BestSellers = () => {
   }
 
   return (
-    <div className="text-third">
+    <div className="text-third wrapper">
       <Heading>shop our BestSellers</Heading>
       <TabList>
         {TabListData.map((tab) => (
@@ -37,7 +37,7 @@ const BestSellers = () => {
         ))}
       </TabList>
       <ProductList data={data}></ProductList>
-      <Button yellow >Shop all best sellers products</Button>
+      <Button yellow className={'w-full text-xl my-8'} >Shop all best sellers products</Button>
     </div>
   );
 };

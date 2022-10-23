@@ -8,6 +8,7 @@ module.exports = {
         primary: "#A76E65",
         secondary: "#466732",
         third: "#69451c", // brown
+        pink: "#A76E65",
         nude: "#EFD7C5",
         lightNude: "#F5EBE0",
         font: "#69451C",
@@ -21,6 +22,7 @@ module.exports = {
         lightGray: "#D8D8D8",
         westar: "#E0E0D6",
         nude2: "#F5F2F2",
+        lightPink: "#f6f0f0",
         borderColor: "rgba(226,152,86,.5)",
       },
       fontFamily: {

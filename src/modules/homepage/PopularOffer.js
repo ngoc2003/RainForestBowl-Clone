@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const PopularOffer = () => {
   return (
-    <div>
+    <div className="wrapper">
       <Heading>our most popular offers</Heading>
       <div className="flex gap-8">
         <div className="flex-1">
