@@ -1,20 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PackItem from "./PackItem";
-
-const PackList = ({ data }) => {
-  const [activePack, setActivePack] = useState('2-Pack');
-  function handleActivePack(e) {
+import Button from "../../button/Button";
+const PackList = ({ data, className = "" }) => {
+  const [activePack, setActivePack] = useState("");
+  const [cost, setCost] = useState("");
+  function handleSetCost(name, pack) {
+    let result = pack.name === name ? pack.cost : "";
+    setCost(result);
+  }
+  function handleActivePack(e, pack) {
     setActivePack(e.target.innerHTML);
+    handleSetCost(e.target.innerHTML, pack);
   }
   return (
-    <div className="flex gap-y-5">
-      {data.map((pack) => (
-        <PackItem
-          onClick={(e) => handleActivePack(e)}
-          pack={pack}
-          active={activePack === pack.name}
-        ></PackItem>
-      ))}
+    <div className={` flex-1 flex justify-end flex-col ${className}`}>
+      <h3 className="mt-1 font-semibold">{cost && `$${cost}`}</h3>
+      <div className="flex gap-y-5">
+        {data.map((pack) => (
+          <PackItem
+            onClick={(e) => handleActivePack(e, pack)}
+            pack={pack}
+            active={activePack}
+          ></PackItem>
+        ))}
+      </div>
+      <Button primary className="mt-3">
+        Add to cart
+      </Button>
     </div>
   );
 };

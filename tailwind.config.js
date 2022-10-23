@@ -13,6 +13,7 @@ module.exports = {
         font: "#69451C",
         lightFont: "#fbf8f7",
         red: "#F44032",
+        yellow: "#FFB903",
         blue: "#2273AA",
         lightBlue: "#2D9CDB",
         orange: "#E29856",

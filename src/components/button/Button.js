@@ -7,6 +7,7 @@ const Button = ({
   type = "text",
   creative = false,
   className,
+  yellow = false,
   // rounded = false,
   onClick = () => {},
 }) => {
@@ -16,7 +17,7 @@ const Button = ({
       type={type}
       className={`rounded-[3px] text-white py-2 text-sm font-bold flex items-center justify-center gap-x-2 duration-200 ${
         primary && "bg-primary"
-      } ${secondary && "bg-secondary"}  ${
+      } ${secondary && "bg-secondary"} ${yellow && "bg-yellow text-font"}  ${
         creative ? "hover:px-3 px-5 origin-center" : "px-3"
       } ${className}`}
     >
