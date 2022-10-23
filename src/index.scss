@@ -10,7 +10,6 @@
 @layer base {
   body {
     @apply text-base font-normal text-font font-sans;
-    line-height: 1.5;
   }
   input {
     @apply outline-none;
