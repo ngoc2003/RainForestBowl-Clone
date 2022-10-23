@@ -18,6 +18,9 @@
     @apply duration-300 hover:font-bold cursor-pointer;
   }
   .hover-img {
-    @apply duration-200 hover:scale-105;
+    @apply duration-200;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
