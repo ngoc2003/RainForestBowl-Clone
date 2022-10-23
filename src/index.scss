@@ -7,10 +7,9 @@
 //     url("./fonts/Raleway-Medium.ttf") format("truetype");
 //   font-weight: medium;
 // }
-/*@layer base {
+@layer base {
   body {
     @apply text-base font-normal text-font font-sans;
-    
   }
   input {
     @apply outline-none;
@@ -25,6 +24,6 @@
     @apply duration-300 hover:font-bold cursor-pointer;
   }
   .hover-img {
-    @apply duration-200 hover:scale-[105%];
+    // @apply duration-200 hover:scale-[105%];
   }
 }
