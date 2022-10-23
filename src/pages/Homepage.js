@@ -8,7 +8,11 @@ import Reason from "../modules/homepage/Reason";
 const Homepage = () => {
   return (
     <div className="flex flex-col gap-y-[50px]">
-      <Banner></Banner>
+      <Banner className='wrapper'>
+        One-of-a-Kind Wabi <br />
+        Sabi Kitchenware <br />
+        (Made Sustainably)
+      </Banner>
       <PopularOffer></PopularOffer>
       <BestSellers></BestSellers>
       <Process></Process>

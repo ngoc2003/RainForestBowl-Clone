@@ -1,10 +1,8 @@
 import React from "react";
 
-const TabList = ({ children }) => {
+const TabList = ({ children, className = "" }) => {
   return (
-    <div className="flex justify-between mb-5">
-      {children}
-    </div>
+    <div className={`flex justify-between mb-5 ${className}`}>{children}</div>
   );
 };
 

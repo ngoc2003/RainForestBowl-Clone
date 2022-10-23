@@ -1,4 +1,5 @@
 export const Images = {
+  //product
   woodenBowls_1: require("./product/wooden-bowls/ClassicCamwoodBowl-Small_360x.webp"),
   woodenBowls_2: require("./product/wooden-bowls/ClassicTeakWoodBowl-Regular-2_360x.webp"),
   woodenBowls_3: require("./product/wooden-bowls/CurvedDoussieWoodBowl-Regular_360x.webp"),
@@ -17,6 +18,18 @@ export const Images = {
   garden_3: require("./product/garden/Planterpot1_180x.avif"),
   soap_dishes_1: require("./product/soap-dishes/ClassicTeakWoodSoapDish1_360x.webp"),
   utensils_1: require("./product/utensils/CoconutwoodFork_360x.webp"),
-  // woodenBowls_1: require('./product/wooden-bowls/ClassicCamwoodBowl-Small_360x.webp').default,
-  // woodenBowls_1: require('./product/wooden-bowls/ClassicCamwoodBowl-Small_360x.webp').default,
+  //tab_reson
+  tab_acacia: require("./wood_type/tab/tab-acacia.webp"),
+  tab_bamboo: require("./wood_type/tab/tab-bamboo.avif"),
+  tab_coconut_wood: require("./wood_type/tab/tab-coconut-wood.webp"),
+  tab_coconut: require("./wood_type/tab/tab-coconut.webp"),
+  tab_olive: require("./wood_type/tab/tab-olive.webp"),
+  tab_teak: require("./wood_type/tab/tab-teak.webp"),
+  //reason
+  acacia: require("./wood_type/Acacia-Wood-collections-new.webp"),
+  bamboo: require("./wood_type/Bamboo-Wood-collections.webp"),
+  coconut_wood: require("./wood_type/Coconut-Shell-collections.webp"),
+  coconut: require("./wood_type/Coconut-Wood-collections.webp"),
+  olive: require("./wood_type/Olive-Wood-collections.webp"),
+  teak: require("./wood_type/Teak-Wood-collections.webp"),
 };
