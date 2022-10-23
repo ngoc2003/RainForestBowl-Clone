@@ -9,7 +9,8 @@
 // }
 @layer base {
   body {
-    @apply text-base font-normal text-font font-sans;
+    // @apply text-base font-normal text-font font-sans;
+    
   }
   input {
     @apply outline-none;
