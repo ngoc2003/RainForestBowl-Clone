@@ -23,6 +23,8 @@ module.exports = {
         westar: "#E0E0D6",
         nude2: "#F5F2F2",
         lightPink: "#f6f0f0",
+        lightPurple: "#EAEDEA",
+        green: '#466732',
         borderColor: "rgba(226,152,86,.5)",
       },
       fontFamily: {

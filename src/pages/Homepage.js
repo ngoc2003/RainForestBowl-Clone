@@ -4,6 +4,7 @@ import BestSellers from "../modules/homepage/BestSellers";
 import PopularOffer from "../modules/homepage/PopularOffer";
 import Process from "../modules/homepage/Process";
 import Reason from "../modules/homepage/Reason";
+import Mission from "../modules/homepage/Mission";
 
 const Homepage = () => {
   return (
@@ -17,6 +18,7 @@ const Homepage = () => {
       <BestSellers></BestSellers>
       <Process></Process>
       <Reason></Reason>
+      <Mission></Mission>
     </div>
   );
 };
