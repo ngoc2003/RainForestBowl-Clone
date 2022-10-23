@@ -1,4 +1,4 @@
-@tailwind base;
+/*@tailwind base;
 @tailwind components;
 @tailwind utilities;
 // @font-face {
@@ -9,7 +9,7 @@
 // }
 @layer base {
   body {
-    // @apply text-base font-normal text-font font-sans;
+    @apply text-base font-normal text-font font-sans;
     
   }
   input {

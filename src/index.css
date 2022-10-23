@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @layer base {
@@ -21,4 +21,4 @@
   .hover-img {
     @apply duration-200 hover:scale-[105%];
   }
-}
+} */
