@@ -11,7 +11,7 @@ const TabItem = ({
   return (
     <div
       {...props}
-      style={{backgroundImage: `url(${image})`}}
+      // style={{backgroundImage: `url(${image})`}}
       className={`px-5 py-3 flex items-center justify-center  capitalize duration-100 cursor-pointer font-bold border rounded-md  border-primary text-base ${
         active ? image?'outline outline-[2px] outline-third': "text-white bg-primary " : "text-primary bg-transparent"
       } ${
