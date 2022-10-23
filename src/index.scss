@@ -1,12 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-// @font-face {
-//   font-family: "Raleway";
-//   src: local("Raleway-Medium"),
-//     url("./fonts/Raleway-Medium.ttf") format("truetype");
-//   font-weight: medium;
-// }
 @layer base {
   body {
     @apply text-base font-normal text-font font-sans;
@@ -24,6 +18,6 @@
     @apply duration-300 hover:font-bold cursor-pointer;
   }
   .hover-img {
-    // @apply duration-200 hover:scale-[105%];
+    @apply duration-200 hover:scale-[105%];
   }
 }
