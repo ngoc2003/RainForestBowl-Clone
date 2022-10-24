@@ -1,4 +1,6 @@
 export const Images = {
+  //common
+  logo: require('./logo.svg').default,
   //product
   woodenBowls_1: require("./product/wooden-bowls/ClassicCamwoodBowl-Small_360x.webp"),
   woodenBowls_2: require("./product/wooden-bowls/ClassicTeakWoodBowl-Regular-2_360x.webp"),
@@ -32,4 +34,16 @@ export const Images = {
   coconut: require("./wood_type/Coconut-Wood-collections.webp"),
   olive: require("./wood_type/Olive-Wood-collections.webp"),
   teak: require("./wood_type/Teak-Wood-collections.webp"),
+  //review
+  review_1: require('./review/Gorgeous_500x.webp'),
+  review_2: require('./review/I_am_IN_LOVE_with_these_bowls_500x.webp'),
+  review_3: require('./review/Such_awesomeness_500x.webp'),
+  review_4: require('./review/These_bowls_are_perfect_500x.webp'),
+  review_5: require('./review/Wooden_Bowls_500x.webp'),
+  review_6: require('./review/Exceptional_Quality_500x.webp'),
+  //social
+  facebook: require('./social/facebook.svg').default,
+  instagram: require('./social/instagram.svg').default,
+  pinterest: require('./social/pinterest.svg').default,
+  youtube: require('./social/youtube.svg').default,
 };

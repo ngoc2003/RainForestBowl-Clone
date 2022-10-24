@@ -5,11 +5,13 @@ import PopularOffer from "../modules/homepage/PopularOffer";
 import Process from "../modules/homepage/Process";
 import Reason from "../modules/homepage/Reason";
 import Mission from "../modules/homepage/Mission";
+import Review from "../modules/homepage/Review";
+import Coupon from "../modules/homepage/Coupon";
 
 const Homepage = () => {
   return (
     <div className="flex flex-col gap-y-[50px]">
-      <Banner className='wrapper'>
+      <Banner className="wrapper">
         One-of-a-Kind Wabi <br />
         Sabi Kitchenware <br />
         (Made Sustainably)
@@ -19,6 +21,8 @@ const Homepage = () => {
       <Process></Process>
       <Reason></Reason>
       <Mission></Mission>
+      <Review></Review>
+      <Coupon></Coupon>
     </div>
   );
 };

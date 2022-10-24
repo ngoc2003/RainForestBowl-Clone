@@ -2,12 +2,13 @@
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  important: true,
   theme: {
     extend: {
       colors: {
         primary: "#A76E65",
         secondary: "#466732",
-        third: "#69451c", // brown
+        // third: "#69451c", 
         pink: "#A76E65",
         nude: "#EFD7C5",
         lightNude: "#F5EBE0",
@@ -26,6 +27,7 @@ module.exports = {
         lightPurple: "#EAEDEA",
         green: '#466732',
         borderColor: "rgba(226,152,86,.5)",
+        borderForm: '#ccc'
       },
       fontFamily: {
         sans: ["sans-serif"],

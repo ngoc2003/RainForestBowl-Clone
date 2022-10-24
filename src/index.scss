@@ -18,9 +18,22 @@
     @apply duration-300 hover:font-bold cursor-pointer;
   }
   .hover-img {
+    //@appy duration-200 hover:scale-105
     @apply duration-200;
     &:hover {
       transform: scale(1.05);
     }
+  }
+  .heading-footer {
+    @apply font-semibold text-xl;
+  }
+  .navi{
+    @apply text-font absolute bg-white text-2xl font-semibold top-1/2 -translate-y-1/2 w-16 h-16 rounded-full z-10 flex cursor-pointer items-center justify-center shadow-md;
+  }
+  .prev{
+    left: 20px,
+  }
+  .next{
+    right: 20px,
   }
 }
