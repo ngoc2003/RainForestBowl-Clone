@@ -6,6 +6,16 @@ const CategoriesData = [
   {
     id: id++,
     title: "Classic camwood Bowl-Small",
+    dimensions: [
+      {
+        name: "diameter",
+        text: 3.5,
+      },
+      {
+        name: "height",
+        text: 2.1,
+      },
+    ],
     type: [
       { name: "2-Pack", cost: 41.95 },
       { name: "4-Pack", cost: 73.95 },
@@ -52,6 +62,20 @@ const CategoriesData = [
       },
     ],
     title: "Classic teak wood Bowl-Medium",
+    dimensions: [
+      {
+        name: "diameter",
+        text: 7.1,
+      },
+      {
+        name: "height",
+        text: 2.4,
+      },
+      {
+        name: "capacity",
+        text: 25,
+      },
+    ],
     type: [
       { name: "2-Pack", cost: 44.95 },
       { name: "4-Pack", cost: 79.95 },
@@ -65,7 +89,7 @@ const CategoriesData = [
     hightlight: [
       {
         name: "RUSTIC FEEL",
-        text: "Lustrous doussie wood with fine grain and patterns add a rustic look and feel to your meals",
+        text: "ustrous doussie wood with fine grain and patterns add a rustic look and feel to your meals",
       },
       {
         name: "RARE ARTISANAL PIECE",
@@ -81,6 +105,16 @@ const CategoriesData = [
       },
     ],
     title: "Curved Doussie Wood Bowl-Regular",
+    dimensions: [
+      {
+        name: "diameter",
+        text: 5.9,
+      },
+      {
+        name: "height",
+        text: 4.7,
+      },
+    ],
     type: [
       { name: "2-Pack", cost: 80.95 },
       { name: "4-Pack", cost: 143.95 },
@@ -109,6 +143,17 @@ const CategoriesData = [
       },
     ],
     title: "Pineapple Teak Wood Bowl",
+    dimensions: [
+      {
+        name: "diameter",
+        text: 5.9,
+      },
+      {
+        name: "height",
+        text: 3.3,
+      },
+      { name: "capacity", text: 17 },
+    ],
     type: [
       { name: "1-Bowl", cost: 32.95 },
       { name: "2-Pack", cost: 57.95 },
@@ -127,6 +172,7 @@ const CategoriesData = [
         name: "TIMELESS LOOK",
         text: "Carries the golden brown colors and lovely grain of teak",
       },
+
       {
         name: "ELEVATE YOUR RECIPES",
         text: "Carved to the shape of a salad bowl, maintains the live edge of teak wood",
@@ -137,6 +183,16 @@ const CategoriesData = [
       },
     ],
     title: "wavy teak wood salad serving bowl",
+    dimensions: [
+      {
+        name: "diameter",
+        text: 11.8,
+      },
+      {
+        name: "height",
+        text: 5.5,
+      },
+    ],
     type: [{ name: "1-Bowl", cost: 89.95 }],
     categories: "wooden bowls",
     image: Images.woodenBowls_5,
@@ -150,7 +206,7 @@ const CategoriesData = [
       },
       {
         name: "TIMELESS LOOK",
-        text: "Carries the golden brown colors and lovely grain of teak",
+        text: "arries the golden brown colors and lovely grain of teak",
       },
       {
         name: "ELEVATE YOUR RECIPES",
@@ -162,6 +218,17 @@ const CategoriesData = [
       },
     ],
     title: "star teak wood bowl",
+    dimensions: [
+      {
+        name: "diameter",
+        text: 5.11,
+      },
+      {
+        name: "height",
+        text: 2.36,
+      },
+      { name: "capacity", text: 10 },
+    ],
     type: [
       { name: "2-Pack", cost: 44.95 },
       { name: "4-Pack", cost: 79.95 },
@@ -175,7 +242,7 @@ const CategoriesData = [
     hightlight: [
       {
         name: "100% NATURAL",
-        text: "No artificial materials used",
+        text: "o artificial materials used",
       },
       {
         name: "ECO-FRIENDLY",
@@ -191,6 +258,17 @@ const CategoriesData = [
       },
     ],
     title: "regular original coconut bowl",
+    dimensions: [
+      {
+        name: "diameter",
+        text: 5,
+      },
+      {
+        name: "height",
+        text: 2,
+      },
+      { name: "capacity", text: 14 },
+    ],
     type: [
       { name: "2-Pack", cost: 16.95 },
       { name: "4-Pack", cost: 29.95 },
@@ -219,6 +297,17 @@ const CategoriesData = [
       },
     ],
     title: "small original coconut bowl",
+    dimensions: [
+      {
+        name: "diameter",
+        text: 4,
+      },
+      {
+        name: "height",
+        text: 2,
+      },
+      { name: "capacity", text: 10 },
+    ],
     type: [
       { name: "2-Pack", cost: 15.95 },
       { name: "4-Pack", cost: 26.95 },
@@ -249,6 +338,20 @@ const CategoriesData = [
       },
     ],
     title: "10 inch teak wood pizza board with handle & Rim",
+    dimensions: [
+      {
+        name: "length",
+        text: 10.6,
+      },
+      {
+        name: "width",
+        text: 14.6,
+      },
+      {
+        name: "height",
+        text: 0.8,
+      },
+    ],
     type: [{ name: "2-Pack", cost: 36.95 }],
     categories: "plates",
     image: Images.plates_1,
@@ -275,6 +378,16 @@ const CategoriesData = [
       },
     ],
     title: "10 inch round rimmed teak wood plate",
+    dimensions: [
+      {
+        name: "diameter",
+        text: 10,
+      },
+      {
+        name: "height",
+        text: 0.78,
+      },
+    ],
     type: [
       { name: "2-Pack", cost: 59.95 },
       { name: "4-Pack", cost: 105.95 },
@@ -304,6 +417,17 @@ const CategoriesData = [
       },
     ],
     title: "Rectangular teak wood plate - small",
+    dimensions: [
+      {
+        name: "length",
+        text: 7.9,
+      },
+      {
+        name: "width",
+        text: 5.9,
+      },
+      { height: 0.8 },
+    ],
     type: [
       { name: "2-Pack", cost: 44.95 },
       { name: "4-Pack", cost: 79.95 },
@@ -333,6 +457,20 @@ const CategoriesData = [
       },
     ],
     title: "Hourglass teak wood candle holder set",
+    dimensions: [
+      {
+        name: "small",
+        text: '0.7" x 0.7" x 7.9"',
+      },
+      {
+        name: "medium",
+        text: '0.7" x 0.7" x 9.8"',
+      },
+      {
+        name: "large",
+        text: '0.7" x 0.7" x 11.8"',
+      },
+    ],
     type: [{ name: "2-Pack", cost: 79.95 }],
     categories: "home",
     image: Images.home_1,
@@ -358,6 +496,16 @@ const CategoriesData = [
       },
     ],
     title: "Rounded teak wood Cup - tall",
+    dimensions: [
+      {
+        name: "diameter",
+        text: 3.5,
+      },
+      {
+        name: "height",
+        text: 6,
+      },
+    ],
     type: [
       { name: "2-Pack", cost: 44.95 },
       { name: "4-Pack", cost: 79.95 },
@@ -386,6 +534,7 @@ const CategoriesData = [
       },
     ],
     title: "hanging fiber coconut planter",
+    dimensions: [],
     type: [
       { name: "2-Pack", cost: 29.95 },
       { name: "4-Pack", cost: 54.95 },
@@ -414,6 +563,7 @@ const CategoriesData = [
       },
     ],
     title: "hanging coconut planter (3 Tier)",
+    dimensions: [],
     type: [
       { name: "1-Pack", cost: 29.95 },
       { name: "2-Pack", cost: 54.95 },
@@ -443,6 +593,16 @@ const CategoriesData = [
       },
     ],
     title: "Horizons coconut planter",
+    dimensions: [
+      {
+        name: "diameter",
+        text: "3.9-5",
+      },
+      {
+        name: "height",
+        text: "3.5-4.3",
+      },
+    ],
     type: [
       { name: "2-Pack", cost: 44.95 },
       { name: "4-Pack", cost: 79.95 },
@@ -471,6 +631,20 @@ const CategoriesData = [
       },
     ],
     title: "Classic Teak wood soap dish",
+    dimensions: [
+      {
+        name: "length",
+        text: 4.7,
+      },
+      {
+        name: "height",
+        text: 0.78,
+      },
+      {
+        name: "width",
+        text: 3.5,
+      },
+    ],
     type: [
       { name: "2-Pack", cost: 29.95 },
       { name: "4-Pack", cost: 54.95 },
@@ -499,6 +673,16 @@ const CategoriesData = [
       },
     ],
     title: "Coconut wood fork",
+    dimensions: [
+      {
+        name: "width",
+        text: 1.4,
+      },
+      {
+        name: "length",
+        text: 7.5,
+      },
+    ],
     type: [
       { name: "4-Pack", cost: 20.95 },
       { name: "8-Pack", cost: 34.95 },

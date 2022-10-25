@@ -33,7 +33,7 @@ const PackItemDetailPage = ({
           </div>
         </div>
       ) : (
-        <div> HI</div>
+        <div onClick={onClick} className={`cursor-pointer inline-block pb-2 font-semibold capitalize ${active ? 'border-b-4 border-b-orange' :'text-lightGray'}`}>{children}</div>
       )}
     </>
   );

@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { v4 } from "uuid";
 import Heading from "../components/Heading";
 import PackItemDetailPage from "../components/product/pack/PackItem_DetailPage";
-// import PackList from "../components/product/pack/PackList";
 import SearchDataById from "../utils/SearchDataById";
 import Search from "../components/search/Search";
 import Button from "../components/button/Button";
@@ -11,19 +10,28 @@ const ProductDetail = () => {
   const { productId } = useParams();
   const data = SearchDataById(productId);
   const [activePack, setActivePack] = useState("");
+  const [activePack_table, setActivePack_table] = useState("");
+  const [info, setShowInfo] = useState("hightlight");
   const [cost, setCost] = useState("");
+  function handleSetActivePack_table(e, in4) {
+    setActivePack_table(e.target.innerHTML.toLowerCase());
+    setShowInfo(in4);
+    console.log(e.target.innerHTML.toLowerCase());
+  }
   function handleActivePack({ name, cost }) {
     setActivePack(name);
     setCost(cost);
   }
   useEffect(() => {
     setActivePack(data.type[0].name);
+    setActivePack_table("products hightlights");
+    setShowInfo("hightlight");
     setCost(data.type[0].cost);
   }, []);
   return (
     <div className="flex wrapper py-14 gap-x-14">
       <div className="flex-1">
-        <img src={data && data.image} className="w-full" alt="" />
+        <img src={data && data.image} className="max-w-[530px] mx-auto" alt="" />
       </div>
       <div className="flex-1">
         <Heading center={false}>{data.title}</Heading>
@@ -53,7 +61,32 @@ const ProductDetail = () => {
           </Button>
         </div>
         <div>
-          <PackItemDetailPage tab_table={true}></PackItemDetailPage>
+          <div className="flex my-5 border-b border-lightGray gap-x-8">
+            <PackItemDetailPage
+              active={"products hightlights" === activePack_table}
+              tab_table={true}
+              onClick={(e) => handleSetActivePack_table(e, "hightlight")}
+            >
+              products hightlights
+            </PackItemDetailPage>
+            <PackItemDetailPage
+              active={"dimensions" === activePack_table}
+              tab_table={true}
+              onClick={(e) => handleSetActivePack_table(e, "dimensions")}
+            >
+              dimensions
+            </PackItemDetailPage>
+          </div>
+          <div>
+            {activePack_table !== "dimension" &&
+              data[info].map((item) => (
+                <li className="my-2 ml-4" key={v4()}>
+                  <span className="font-semibold uppercase">{item.name}</span>
+                  {" : "}
+                  <span>{item.text}</span>
+                </li>
+              ))}
+          </div>
         </div>
       </div>
     </div>
