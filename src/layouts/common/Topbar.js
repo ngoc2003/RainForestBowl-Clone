@@ -29,7 +29,7 @@ const Topbar = () => {
           )
         )}
         <div className="relative">
-          <CartButton onClick={handleToggleListCart}></CartButton>
+          <CartButton onMouseOver={handleToggleListCart}></CartButton>
           {showListCart && <DropdownCart></DropdownCart>}
         </div>
       </div>

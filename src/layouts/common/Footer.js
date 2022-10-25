@@ -31,7 +31,7 @@ const Footer = () => {
         <p className="uppercase ">trees planted to date</p>
       </div>
       <div className="grid-cols-4 col-span-4">
-        <div className="flex mb-5">
+        <div className="flex mb-5 gap-x-14">
           <div className="flex flex-col flex-1 gap-y-5">
             <h4 className="heading-footer">About us</h4>
             <p>

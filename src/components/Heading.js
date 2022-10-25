@@ -1,7 +1,15 @@
 import React from "react";
 
-const Heading = ({ children }) => {
-  return <h4 className="text-[38px] capitalize font-semibold text-center mb-14 text-font">{children}</h4>;
+const Heading = ({ children, center = true }) => {
+  return (
+    <h4
+      className={`text-4xl capitalize font-semibold  mb-14 text-font ${
+        center && "text-center"
+      }`}
+    >
+      {children}
+    </h4>
+  );
 };
 
 export default Heading;
