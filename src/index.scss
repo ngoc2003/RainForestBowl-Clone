@@ -27,6 +27,11 @@
   .heading-footer {
     @apply font-semibold text-xl;
   }
+  .product-des{
+    br{
+      margin-bottom:10px;
+    }
+  }
   .navi{
     @apply text-font absolute bg-white text-2xl font-semibold top-1/2 -translate-y-1/2 w-16 h-16 rounded-full z-10 flex cursor-pointer items-center justify-center shadow-md;
   }

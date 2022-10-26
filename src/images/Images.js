@@ -1,6 +1,7 @@
 export const Images = {
   //common
-  logo: require('./logo.svg').default,
+  logo: require("./logo.svg").default,
+  price_tag: require("./icon-pricing.webp"),
   //product
   woodenBowls_1: require("./product/wooden-bowls/ClassicCamwoodBowl-Small_360x.webp"),
   woodenBowls_2: require("./product/wooden-bowls/ClassicTeakWoodBowl-Regular-2_360x.webp"),
@@ -20,30 +21,39 @@ export const Images = {
   garden_3: require("./product/garden/Planterpot1_180x.avif"),
   soap_dishes_1: require("./product/soap-dishes/ClassicTeakWoodSoapDish1_360x.webp"),
   utensils_1: require("./product/utensils/CoconutwoodFork_360x.webp"),
-  //tab_reson
+  //tab_reson_homepage
   tab_acacia: require("./wood_type/tab/tab-acacia.webp"),
   tab_bamboo: require("./wood_type/tab/tab-bamboo.avif"),
   tab_coconut_wood: require("./wood_type/tab/tab-coconut-wood.webp"),
   tab_coconut: require("./wood_type/tab/tab-coconut.webp"),
   tab_olive: require("./wood_type/tab/tab-olive.webp"),
   tab_teak: require("./wood_type/tab/tab-teak.webp"),
-  //reason
+  //reason_hompage
   acacia: require("./wood_type/Acacia-Wood-collections-new.webp"),
   bamboo: require("./wood_type/Bamboo-Wood-collections.webp"),
   coconut_wood: require("./wood_type/Coconut-Shell-collections.webp"),
   coconut: require("./wood_type/Coconut-Wood-collections.webp"),
   olive: require("./wood_type/Olive-Wood-collections.webp"),
   teak: require("./wood_type/Teak-Wood-collections.webp"),
+  //features_detail
+  features_worldwide: require("./detailpage/features/icon-feature-worldwide.webp"),
+  features_moneyBack: require("./detailpage/features/icon-feature-money-back.webp"),
+  features_freeShipping: require("./detailpage/features/icon-feature-free-shipping.avif"),
+  features_expert: require("./detailpage/features/icon-feature-expert.webp"),
+  //commit_detail
+  handcraf: require('./detailpage/commit/icon-handcraft_60x.webp'),
+  leaf: require('./detailpage/commit/icon-leaf-round_60x.webp'),
+  safe: require('./detailpage/commit/icon-safe-food_60x.avif'),
   //review
-  review_1: require('./review/Gorgeous_500x.webp'),
-  review_2: require('./review/I_am_IN_LOVE_with_these_bowls_500x.webp'),
-  review_3: require('./review/Such_awesomeness_500x.webp'),
-  review_4: require('./review/These_bowls_are_perfect_500x.webp'),
-  review_5: require('./review/Wooden_Bowls_500x.webp'),
-  review_6: require('./review/Exceptional_Quality_500x.webp'),
+  review_1: require("./review/Gorgeous_500x.webp"),
+  review_2: require("./review/I_am_IN_LOVE_with_these_bowls_500x.webp"),
+  review_3: require("./review/Such_awesomeness_500x.webp"),
+  review_4: require("./review/These_bowls_are_perfect_500x.webp"),
+  review_5: require("./review/Wooden_Bowls_500x.webp"),
+  review_6: require("./review/Exceptional_Quality_500x.webp"),
   //social
-  facebook: require('./social/facebook.svg').default,
-  instagram: require('./social/instagram.svg').default,
-  pinterest: require('./social/pinterest.svg').default,
-  youtube: require('./social/youtube.svg').default,
+  facebook: require("./social/facebook.svg").default,
+  instagram: require("./social/instagram.svg").default,
+  pinterest: require("./social/pinterest.svg").default,
+  youtube: require("./social/youtube.svg").default,
 };

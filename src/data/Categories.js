@@ -689,6 +689,11 @@ const CategoriesData = [
     ],
     categories: "utensils",
     image: Images.utensils_1,
+    description: `Eating with wooden utensils can give anyone a pleasant sense of being at one with nature. With our Coconut Wood Fork, you can immerse yourself in dreams of islands in the sun while enjoying your everyday meals.
+<br />
+This 3-inch long fork was crafted from the trunk of a coconut tree, providing it with a classic and natural look. Unlike metal forks, this wooden fork won’t ruin your meals with a metallic taste or a scraping metal sound. On the contrary, it’ll make your food taste as warm as the sunshine on a tropical coast. It will also be a classic addition to your regular utensil set, perfect for a warm and homey kitchen space.
+    <br />
+Since the Coconut Wood Fork is made from coconut timber, it’s the perfect utensil to pair with your coconut bowl. With this fork, you’ll surely enjoy digging into your favorite Buddha bowl recipe or your tasty fattoush salad served in your coconut bowl.`,
   },
 ];
 
