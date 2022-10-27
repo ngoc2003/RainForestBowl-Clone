@@ -1,20 +1,11 @@
 import React from "react";
 import Heading from "../../components/Heading";
-import bottom from "../../images/homepage/newsletter-bottom-bg.webp";
-import top from "../../images/homepage/newsletter-top-bg.webp";
 import Search from "../../components/search/Search";
 import Button from "../../components/button/Button";
+import BackgroundAttemp from "../../components/BackgroundAttemp";
 const Coupon = () => {
   return (
-    <div
-      className="py-14 wrapper bg-lightNude "
-      style={{
-        backgroundImage: `url(${top}),url(${bottom})`,
-        backgroundPosition: "top right, bottom left",
-        backgroundSize: "contain, contain",
-        backgroundRepeat: "no-repeat, no-repeat",
-      }}
-    >
+    <BackgroundAttemp>
       <Heading>get 20% off coupon gift code</Heading>
       <p className="pb-5 -mt-8 text-center">
         Enter Your Email to receive 20% off coupon codes, Annoucement, special
@@ -33,7 +24,7 @@ const Coupon = () => {
           Get 20% OFF Code
         </Button>
       </div>
-    </div>
+    </BackgroundAttemp>
   );
 };
 

@@ -41,9 +41,9 @@ export const Images = {
   features_freeShipping: require("./detailpage/features/icon-feature-free-shipping.avif"),
   features_expert: require("./detailpage/features/icon-feature-expert.webp"),
   //commit_detail
-  handcraf: require('./detailpage/commit/icon-handcraft_60x.webp'),
-  leaf: require('./detailpage/commit/icon-leaf-round_60x.webp'),
-  safe: require('./detailpage/commit/icon-safe-food_60x.avif'),
+  handcraf: require("./detailpage/commit/icon-handcraft_60x.webp"),
+  leaf: require("./detailpage/commit/icon-leaf-round_60x.webp"),
+  safe: require("./detailpage/commit/icon-safe-food_60x.avif"),
   //review
   review_1: require("./review/Gorgeous_500x.webp"),
   review_2: require("./review/I_am_IN_LOVE_with_these_bowls_500x.webp"),
@@ -56,4 +56,33 @@ export const Images = {
   instagram: require("./social/instagram.svg").default,
   pinterest: require("./social/pinterest.svg").default,
   youtube: require("./social/youtube.svg").default,
+  //care
+
+  //common
+  water_clean: require("./care/icon-water-clean.png").default,
+  wash: require("./care/icon-wash.png").default,
+  sun_light: require("./care/icon-sunlight.avif"),
+  store: require("./care/icon-store.avif"),
+  rinse_common: require("./care/icon-rinse-common.avif"),
+  over_water: require("./care/icon-overwater.png").default,
+  keep_dry: require("./care/icon-keep-dry.avif"),
+  hot_cup: require("./care/icon-hot-cup.png").default,
+  hot_bowl: require("./care/icon-hot-bowl.webp"),
+  harsh_sunlight: require("./care/icon-harsh-sunlight.png").default,
+  hand: require("./care/icon-hand.webp"),
+  //plates
+  sun_light_plate: require("./care/icon-sunlight-plate.avif"),
+  soak_plate: require("./care/icon-soak-plate.avif"),
+  dry_plate: require("./care/icon-dry-plate.png").default,
+  wash_plate: require("./care/icon-wash-plate.webp"),
+  //utensils
+  rinse_utensils: require("./care/icon-rinse-utensils.avif"),
+  dry_utensils: require("./care/icon-dry-utensils.png").default,
+  wash_utensils: require("./care/icon-wash-utensils.png").default,
+  coat_utensils: require("./care/icon-coat-utensils.png").default,
+  //soap_dishes
+  wash_dish: require("./care/icon-wash-dish.png").default,
+  dry_dish: require("./care/icon-dry-dish.png").default,
+  rinse_dish: require("./care/icon-rinse-dish.png").default,
+  coat_dish: require("./care/icon-coat-dish.png").default,
 };

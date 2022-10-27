@@ -17,9 +17,9 @@ const BestSellers = () => {
       setData(result);
     }
   }
-  async function handleChangeTabActive(e) {
-    setActiveTab(e.target.innerHTML.toLowerCase());
-    handleSetData(e.target.innerHTML.toLowerCase());
+  async function handleChangeTabActive(tab) {
+    setActiveTab(tab);
+    handleSetData(tab);
   }
 
   return (
@@ -28,11 +28,11 @@ const BestSellers = () => {
       <TabList>
         {TabListData.map((tab) => (
           <TabItem
-            active={activeTab === tab}
-            key={tab}
-            onClick={(e) => handleChangeTabActive(e)}
+            active={activeTab === tab.name}
+            key={tab.name}
+            onClick={() => handleChangeTabActive(tab.name)}
           >
-            {tab}
+            {tab.name}
           </TabItem>
         ))}
       </TabList>
