@@ -11,6 +11,7 @@ import Button from "../components/button/Button";
 import WholeSaleTag from "../modules/detail/WholeSaleTag";
 import Features from "../modules/detail/Features";
 import Commit from "../modules/detail/Commit";
+import Video from "../modules/detail/Video";
 const ProductDetail = () => {
   const { productId } = useParams();
   const data = SearchDataById(productId);
@@ -104,19 +105,20 @@ const ProductDetail = () => {
       </div>
       <Features></Features>
       <BackgroundCreative>
-        <div className="wrapper flex gap-x-8">
+        <div className="flex wrapper gap-x-8">
           <div className="flex-1">
             <img src={data.image} className="w-full" alt="" />
           </div>
           <div className="flex-1">
             <Interweave
               content={data.description}
-              className="product-des  font-thin  "
+              className="font-thin product-des "
             />
             <Commit></Commit>
           </div>
         </div>
       </BackgroundCreative>
+      <Video video_path={data.video_path}></Video>
     </div>
   );
 };
