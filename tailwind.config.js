@@ -8,7 +8,8 @@ module.exports = {
       colors: {
         primary: "#A76E65",
         secondary: "#466732",
-        // third: "#69451c", 
+        // third: "#69451c",
+        black: "#69451c",
         pink: "#A76E65",
         nude: "#EFD7C5",
         lightNude: "#F5EBE0",
@@ -25,9 +26,9 @@ module.exports = {
         nude2: "#F5F2F2",
         lightPink: "#f6f0f0",
         lightPurple: "#EAEDEA",
-        green: '#466732',
+        green: "#466732",
         borderColor: "rgba(226,152,86,.5)",
-        borderForm: '#ccc'
+        borderForm: "#ccc",
       },
       fontFamily: {
         sans: ["sans-serif"],

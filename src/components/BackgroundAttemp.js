@@ -13,7 +13,6 @@ const BackgroundAttemp = ({ children }) => {
         backgroundRepeat: "no-repeat, no-repeat",
       }}
     >
-      {" "}
       {children}
     </div>
   );

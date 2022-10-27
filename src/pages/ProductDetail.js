@@ -12,6 +12,8 @@ import WholeSaleTag from "../modules/detail/WholeSaleTag";
 import Features from "../modules/detail/Features";
 import Commit from "../modules/detail/Commit";
 import Video from "../modules/detail/Video";
+import Instruction from "../modules/detail/Instruction";
+import Coupon from '../modules/homepage/Coupon'
 const ProductDetail = () => {
   const { productId } = useParams();
   const data = SearchDataById(productId);
@@ -35,7 +37,7 @@ const ProductDetail = () => {
     setCost(data.type[0].cost);
   }, []);
   return (
-    <div className=" py-14">
+    <div className="flex flex-col gap-8 py-14">
       <div className="flex gap-x-14 wrapper">
         <div className="flex-1">
           <img
@@ -119,6 +121,8 @@ const ProductDetail = () => {
         </div>
       </BackgroundCreative>
       <Video video_path={data.video_path}></Video>
+      <Instruction categories={data.categories}></Instruction>
+      <Coupon></Coupon>
     </div>
   );
 };
