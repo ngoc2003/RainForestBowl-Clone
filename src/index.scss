@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.Toastify__toast-icon.Toastify--animate-icon.Toastify__zoom-enter {
+  svg {
+    @apply fill-primary;
+  }
+}
 @layer base {
   body {
     @apply text-base font-normal text-black font-sans;
@@ -27,18 +32,24 @@
   .heading-footer {
     @apply font-semibold text-xl;
   }
-  .product-des{
-    br{
-      margin-bottom:10px;
+  .product-des {
+    br {
+      margin-bottom: 10px;
     }
   }
-  .navi{
+  .navi {
     @apply text-font absolute bg-white text-2xl font-semibold top-1/2 -translate-y-1/2 w-16 h-16 rounded-full z-10 flex cursor-pointer items-center justify-center shadow-md;
   }
-  .prev{
-    left: 20px,
+  .prev {
+    left: 20px;
   }
-  .next{
-    right: 20px,
+  .next {
+    right: 20px;
   }
+}
+.Toastify__toast--success::before {
+  @apply bg-primary;
+}
+.Toastify__toast--success::after {
+  @apply bg-primary;
 }

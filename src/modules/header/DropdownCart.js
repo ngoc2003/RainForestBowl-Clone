@@ -19,10 +19,12 @@ const DropdownCart = React.forwardRef((props, ref) => {
     >
       {data.length > 0 ? (
         <>
-          {data.map((item) => (
-            <ProductCartItem data={item} key={v4()}></ProductCartItem>
-          ))}
-          <div className="w-full my-5 border-t border-t-lightGray">
+          <div className='max-h-[200px] overflow-y-auto'>
+            {data.map((item) => (
+              <ProductCartItem data={item} key={v4()}></ProductCartItem>
+            ))}
+          </div>
+          <div className="w-full my-5 border-t border-t-lightGray ">
             <div className="flex justify-between mt-2">
               <span>Subtotal:</span>
               <span className="font-semibold">${price}</span>
@@ -37,8 +39,12 @@ const DropdownCart = React.forwardRef((props, ref) => {
             </div>
           </div>
           <div className="flex w-full gap-x-3">
-            <Button fluid className={'text-lg'} outline>View my cart</Button>
-            <Button fluid className={'text-lg'} primary>Check out now</Button>
+            <Button fluid className={"text-lg"} outline>
+              View my cart
+            </Button>
+            <Button fluid className={"text-lg"} primary>
+              Check out now
+            </Button>
           </div>
         </>
       ) : (

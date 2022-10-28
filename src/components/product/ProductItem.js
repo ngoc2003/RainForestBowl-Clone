@@ -5,26 +5,21 @@ import PackList from "./pack/PackList";
 import { useDispatch } from "react-redux";
 import CartSlice from "../../redux/reducerSlice/CartSlice";
 
-import { ToastContainer, toast } from "react-toastify";
 const ProductItem = ({ data, className, search = false }) => {
   const [typeData, setTypeData] = useState(null);
   const dispatch = useDispatch();
   function handleAddCart(data) {
-    if (typeData !== null && typeData !== undefined && typeData) {
-      dispatch(
-        CartSlice.actions.add({
-          ...data,
-          type: { ...typeData },
-          amount: 1,
-        })
-      );
-    } else {
-      toast("Not choose Pack");
-    }
+    dispatch(
+      CartSlice.actions.add({
+        ...data,
+        type: { ...typeData },
+        amount: 1,
+      })
+    );
+
   }
   return (
     <div className={` flex flex-col ${className}`}>
-      <ToastContainer />
       <Link to={`./product/${data.id}`}>
         <img src={data.image} alt="" />
         <h4 className="capitalize">{data.title}</h4>

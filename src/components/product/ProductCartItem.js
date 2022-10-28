@@ -9,11 +9,11 @@ const ProductCartItem = ({ data }) => {
     dispatch(CartSlice.actions.remove(id));
   }
   return (
-    <div className="flex items-start justify-between w-full text-black">
+    <div className="flex items-start justify-between w-full pr-2 my-2 text-black gap-x-3">
       <div className="flex gap-x-5">
         <img src={data.image} className="h-16" alt="" />
         <div>
-          <h4 className="font-semibold">{data.title}</h4>
+          <h4 className="font-semibold capitalize">{data.title}</h4>
           <p>
             {data.type.name} x {data.amount}
           </p>
