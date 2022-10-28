@@ -4,7 +4,20 @@ const CartSlice = createSlice({
   initialState: [],
   reducers: {
     add: (state, action) => {
-      state.push(action.payload);
+      console.log(action.payload);
+      let index = state.findIndex(
+        (item) =>
+          item.id === action.payload.id &&
+          item.type.name === action.payload.type.name
+      );
+      if (index === -1) {
+        state.push(action.payload);
+      } else {
+        state[index] = {
+          ...state[index],
+          amount: +state[index].amount + +action.payload.amount,
+        };
+      }
     },
     remove: (state, action) => {
       let index = state.findIndex((item) => item.id === action.payload);

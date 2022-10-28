@@ -4,12 +4,12 @@ import Close from "../../icons/Close";
 import CartSlice from "../../redux/reducerSlice/CartSlice";
 
 const ProductCartItem = ({ data }) => {
-    const dispatch = useDispatch()
+  const dispatch = useDispatch();
   function handleDeleteCart(id) {
-    dispatch(CartSlice.actions.remove(id))
+    dispatch(CartSlice.actions.remove(id));
   }
   return (
-    <div className="flex items-start justify-between w-full p-5 text-black">
+    <div className="flex items-start justify-between w-full text-black">
       <div className="flex gap-x-5">
         <img src={data.image} className="h-16" alt="" />
         <div>
