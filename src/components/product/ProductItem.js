@@ -1,14 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import AddButton from "../button/AddButton";
 import PackList from "./pack/PackList";
+import { useDispatch } from "react-redux";
+import CartSlice from "../../redux/reducerSlice/CartSlice";
 
-const ProductItem = ({ data }) => {
+import { ToastContainer, toast } from 'react-toastify';
+const ProductItem = ({ data, className, search = false }) => {
+  const [typeData, setTypeData] = useState(null);
+  const dispatch = useDispatch();
+  function handleAddCart(data) {
+    if (typeData !== null && typeData !== undefined && typeData) {
+      dispatch(
+        CartSlice.actions.add({
+          ...data,
+          type: { ...typeData },
+          amount: 1,
+        })
+      );
+    } else {
+      toast('Not choose Pack')
+    }
+  }
   return (
-    <Link to={`./product/${data.id}`} className="h-[380px] flex flex-col">
-      <img src={data.image} alt="" />
-      <h4 className="capitalize">{data.title}</h4>
-      <PackList data={data.type} className="flex-1"></PackList>
-    </Link>
+    <div className={` flex flex-col ${className}`}>
+      <ToastContainer/>
+
+      <Link to={`./product/${data.id}`}>
+        <img src={data.image} alt="" />
+        <h4 className="capitalize">{data.title}</h4>
+      </Link>
+      {!search && (
+        <>
+          <PackList
+            data={data.type}
+            className="flex-1 mb-3"
+            setTypeData={setTypeData}
+          ></PackList>
+          <AddButton primary onClick={() => handleAddCart(data)}>
+            Add to cart
+          </AddButton>
+        </>
+      )}
+    </div>
   );
 };
 

@@ -1,21 +1,50 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../../images/logo.svg";
+import logoText from "../../images/logoText.svg";
 import { Link } from "react-router-dom";
 import Button from "../../components/button/Button";
 import Cart from "../../icons/Cart";
 import { TopbarData } from "../../data/Topbar";
 import CartButton from "../../modules/header/CartButton";
 import DropdownCart from "../../modules/header/DropdownCart";
-const Topbar = () => {
+import { useSelector } from "react-redux";
+import { cartSelector } from "../../redux/selector";
+const Topbar = ({ showLogoText }) => {
+  const cartList = useSelector(cartSelector);
+  // const dropDownRef = useRef();
+  // const cartButtonRef = useRef();
   const [showListCart, setShowListCart] = useState(false);
   function handleToggleListCart() {
-    console.log(showListCart);
     setShowListCart(!showListCart);
   }
+  window.addEventListener("scroll", () => {
+    setShowListCart(false)
+  });
+  // useEffect(() => {
+  //   function handleClickOut(e) {
+  //     console.log(dropDownRef.current.contains(e.target));
+  //     if (
+  //       !cartButtonRef.current.contains(e.target) &&
+  //       !dropDownRef.current.contains(e.target)
+  //     ) {
+  //       setShowListCart(false);
+  //     }
+  //   }
+  //   document.addEventListener("click", (e) => handleClickOut(e));
+  //   return () => {
+  //     document.removeEventListener("click", handleClickOut);
+  //   };
+  // }, []);
   return (
-    <div className="relative flex py-5 border-b wrapper border-b-borderColor">
-      <img src={logo} alt="" className="absolute -top-7" />
-      <div className="w-[300px]"></div>
+    <div className="relative flex items-center py-5 bg-white border-b gap-x-10 wrapper border-b-borderColor">
+      <Link to="/">
+        {showLogoText ? (
+          <img src={logoText} alt="" />
+        ) : (
+          <img src={logo} alt="" className="absolute -top-7" />
+        )}
+      </Link>
+      {!showLogoText && <div className="w-[200px]"></div>}
       <div className="flex items-center justify-between flex-1 ">
         {TopbarData.map((item) =>
           item.path ? (
@@ -29,8 +58,11 @@ const Topbar = () => {
           )
         )}
         <div className="relative">
-          <CartButton onMouseOver={handleToggleListCart}></CartButton>
-          {showListCart && <DropdownCart></DropdownCart>}
+          <CartButton
+            amount={cartList.length}
+            onClick={handleToggleListCart}
+          ></CartButton>
+          {showListCart && <DropdownCart data={cartList}></DropdownCart>}
         </div>
       </div>
     </div>

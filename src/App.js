@@ -13,8 +13,8 @@ const Error = lazy(() => import("./components/Error"));
 
 function App() {
   return (
-    <Suspense>
-      <ScrollToTop>
+    <ScrollToTop>
+      <Suspense>
         <Routes>
           <Route element={<LayoutDefault />}>
             <Route path="/" element={<Homepage />}></Route>
@@ -25,8 +25,8 @@ function App() {
           </Route>
           <Route path="*" element={<Error />}></Route>
         </Routes>
-      </ScrollToTop>
-    </Suspense>
+      </Suspense>
+    </ScrollToTop>
   );
 }
 

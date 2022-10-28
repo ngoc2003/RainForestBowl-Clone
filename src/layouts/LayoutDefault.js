@@ -6,7 +6,7 @@ import Error from '../components/Error';
 import Footer from './common/Footer';
 const LayoutDefault = () => {
     return (
-        <div>
+        <div className='relative'>
             <Header></Header>
             <Outlet></Outlet>
             <Footer></Footer>

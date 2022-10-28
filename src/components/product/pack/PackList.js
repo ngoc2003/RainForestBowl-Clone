@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PackItem from "./PackItem";
 import Button from "../../button/Button";
-const PackList = ({ data, className = "" }) => {
+const PackList = ({ data, className = "", setTypeData = () => {} }) => {
   const [activePack, setActivePack] = useState("");
   const [cost, setCost] = useState("");
   function handleSetCost(name, pack) {
@@ -12,6 +12,16 @@ const PackList = ({ data, className = "" }) => {
     setActivePack(e.target.innerHTML);
     handleSetCost(e.target.innerHTML, pack);
   }
+  useEffect(() => {
+    setActivePack(data[0].name);
+    setCost(data[0].cost);
+  }, []);
+  useEffect(() => {
+    setTypeData({
+      cost: cost,
+      name: activePack,
+    });
+  }, [cost, activePack]);
   return (
     <div className={` flex-1 flex justify-end flex-col ${className}`}>
       <h3 className="mt-1 font-semibold">{cost && `$${cost}`}</h3>
@@ -24,9 +34,6 @@ const PackList = ({ data, className = "" }) => {
           ></PackItem>
         ))}
       </div>
-      <Button primary className="mt-3">
-        Add to cart
-      </Button>
     </div>
   );
 };

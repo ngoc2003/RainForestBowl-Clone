@@ -2,7 +2,8 @@ import React from "react";
 import Button from "../../components/button/Button";
 import Cart from "../../icons/Cart";
 
-const CartButton = ({ className, onClick = () => {} }) => {
+const CartButton = React.forwardRef((props, ref) => {
+  const { className, onClick = () => {}, amount } = props
   return (
     <Button primary onClick={onClick}>
       <div className="relative">
@@ -10,12 +11,12 @@ const CartButton = ({ className, onClick = () => {} }) => {
         <span
           className={`bg-nude w-[14px] h-[14px] rounded-full absolute bottom-0 -right-1 text-[10px] flex items-center justify-center ${className}`}
         >
-          0
+          {amount}
         </span>
       </div>
       Cart
     </Button>
   );
-};
+});
 
 export default CartButton;

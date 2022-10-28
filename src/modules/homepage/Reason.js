@@ -4,6 +4,7 @@ import TabItem from "../../components/tab/TabItem";
 import TabList from "../../components/tab/TabList";
 import ReasonData from "../../data/ReasonData";
 import Banner from "../../modules/homepage/Banner";
+import {v4} from 'uuid'
 const Reason = () => {
   const [activeTab, setActiveTab] = useState(ReasonData[0].name);
   const [data, setData] = useState(ReasonData[0]);
@@ -15,7 +16,6 @@ const Reason = () => {
     setActiveTab(tabName.toLowerCase());
     handleSetData(tabName.toLowerCase());
   }
-  console.log(activeTab);
   return (
     <div className="wrapper">
       <Heading>Why we work with wood</Heading>
@@ -31,7 +31,7 @@ const Reason = () => {
       </p>
       <TabList className="gap-x-5">
         {ReasonData.map((tab) => (
-          <div className="flex-1">
+          <div className="flex-1" key={v4()}>
             <TabItem
               image={tab.imageTab}
               active={activeTab === tab.name.toLowerCase()}
