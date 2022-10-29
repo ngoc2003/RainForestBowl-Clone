@@ -5,7 +5,7 @@ import { v4 } from "uuid";
 import MaterialsData from "../../../data/Materials";
 import TabListData from "../../../data/TabList";
 import GetAmount from "../../../utils/GetAmount";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 function Title({ children }) {
   return (
     <div
@@ -22,6 +22,7 @@ function Title({ children }) {
 const FilterOption = () => {
   const { state } = useLocation();
   const name = state.categories;
+
   const dispatch = useDispatch();
   const [categories, setCategories] = useState(name);
   const [materials, setMaterials] = useState(

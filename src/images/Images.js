@@ -46,6 +46,7 @@ export const Images = {
   productLine_plates: require("./collection/product-line-trays.webp"),
   productLine_utensils: require("./collection/product-line-utensils.webp"),
   //collectionPage
+  bestsellers_collection: require('./collection/collectionDetailPage/bestsellers.webp'),
   woodenBowls_collection: require('./collection/collectionDetailPage/woodenBowls.webp'),
   coconutBowls_collection: require('./collection/collectionDetailPage/coconutBowls.webp'),
   plates_collection: require('./collection/collectionDetailPage/woodenPlates.webp'),

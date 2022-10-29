@@ -37,7 +37,18 @@ const BestSellers = () => {
         ))}
       </TabList>
       <ProductList data={data}></ProductList>
-      <Button yellow className={'w-full text-xl my-8'} >Shop all best sellers products</Button>
+      <Button
+        yellow
+        className={"w-full text-xl my-8"}
+        to={TabListData[0].path}
+        state={{
+          categories: TabListData[0].name,
+          description: TabListData[0].collectionDes,
+          image: TabListData[0].collectionImage,
+        }}
+      >
+        Shop all best sellers products
+      </Button>
     </div>
   );
 };

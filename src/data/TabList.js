@@ -4,6 +4,12 @@ const TabListData = [
   {
     name: "bestsellers",
     care: [],
+    collectionDes: [
+      "An eco-home won’t be complete without eco-friendly products. Find sustainable sets of all-natural bowls, cups, plates, utensils, soap dishes, straws & more. Made of natural materials, handcrafted by artisans",
+    ],
+    collectionImage: Images.bestsellers_collection,
+
+    path: "/collections/bestsellers",
   },
   {
     name: "wooden bowls",

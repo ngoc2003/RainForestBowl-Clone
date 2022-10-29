@@ -13,9 +13,11 @@ const Button = ({
   outline = false,
   to = "",
   onClick = () => {},
+  ...props
 }) => {
   const btn = (
     <button
+      {...props}
       onClick={onClick}
       type={type}
       style={{ fontSize: "14px", width: `${fluid ? "100%" : "auto"}` }}
@@ -34,7 +36,17 @@ const Button = ({
       {children}
     </button>
   );
-  return <>{to ? <Link to={to}>{btn}</Link> : btn}</>;
+  return (
+    <>
+      {to ? (
+        <Link to={to} {...props}>
+          {btn}
+        </Link>
+      ) : (
+        btn
+      )}
+    </>
+  );
 };
 
 export default Button;
