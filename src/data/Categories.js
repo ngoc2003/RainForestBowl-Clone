@@ -6,6 +6,7 @@ const CategoriesData = [
   {
     id: id++,
     title: "Classic camwood Bowl-Small",
+    materials: 'camwood',
     video_path: "8iHA3fDidT0",
     dimensions: [
       {
@@ -68,6 +69,8 @@ const CategoriesData = [
       },
     ],
     title: "Classic teak wood Bowl-Medium",
+    materials: 'teak wood',
+
     video_path: "piZuDl89aUo",
     dimensions: [
       {
@@ -119,6 +122,8 @@ const CategoriesData = [
       },
     ],
     title: "Curved Doussie Wood Bowl-Regular",
+    materials: 'dousin wood',
+
     video_path: "8iHA3fDidT0",
     dimensions: [
       {
@@ -165,6 +170,8 @@ const CategoriesData = [
       },
     ],
     title: "Pineapple Teak Wood Bowl",
+    materials: 'teak wood',
+
     video_path: "piZuDl89aUo",
     dimensions: [
       {
@@ -211,6 +218,8 @@ const CategoriesData = [
       },
     ],
     title: "wavy teak wood salad serving bowl",
+    materials: 'teak wood',
+
     video_path: "piZuDl89aUo",
     dimensions: [
       {
@@ -253,6 +262,8 @@ const CategoriesData = [
       },
     ],
     title: "star teak wood bowl",
+    materials: 'teak wood',
+
     video_path: "piZuDl89aUo",
     dimensions: [
       {
@@ -299,6 +310,8 @@ const CategoriesData = [
       },
     ],
     title: "regular original coconut bowl",
+    materials: 'coconut wood',
+
     video_path: "6sWA1RpsLRs",
     dimensions: [
       {
@@ -346,6 +359,8 @@ const CategoriesData = [
       },
     ],
     title: "small original coconut bowl",
+    materials: 'coconut wood',
+
     video_path: "6sWA1RpsLRs",
     dimensions: [
       {
@@ -397,6 +412,8 @@ const CategoriesData = [
       },
     ],
     title: "10 inch teak wood pizza board with handle & Rim",
+    materials: 'teak wood',
+
     video_path: "piZuDl89aUo",
     dimensions: [
       {
@@ -445,6 +462,8 @@ const CategoriesData = [
       },
     ],
     title: "10 inch round rimmed teak wood plate",
+    materials: 'teak wood',
+
     video_path: "EjKA0zQZ7XY",
     dimensions: [
       {
@@ -490,6 +509,8 @@ const CategoriesData = [
       },
     ],
     title: "Rectangular teak wood plate - small",
+    materials: 'teak wood',
+
     video_path: "EjKA0zQZ7XY",
     dimensions: [
       {
@@ -536,6 +557,8 @@ const CategoriesData = [
       },
     ],
     title: "Hourglass teak wood candle holder set",
+    materials: 'teak wood',
+
     video_path: "EjKA0zQZ7XY",
     dimensions: [
       {
@@ -581,6 +604,8 @@ const CategoriesData = [
       },
     ],
     title: "Rounded teak wood Cup - tall",
+    materials: 'teak wood',
+
     video_path: "EjKA0zQZ7XY",
     dimensions: [
       {
@@ -625,6 +650,8 @@ const CategoriesData = [
       },
     ],
     title: "hanging fiber coconut planter",
+    materials: 'coconut wood',
+
     video_path: "zHXtsa3FsNs",
     dimensions: [],
     type: [
@@ -662,6 +689,8 @@ const CategoriesData = [
       },
     ],
     title: "hanging coconut planter (3 Tier)",
+    materials: 'coconut wood',
+
     video_path: "WBJkPqBQ-z4",
     dimensions: [],
     type: [
@@ -699,6 +728,7 @@ const CategoriesData = [
         text: "Great for holding your cacti, succulents, and other plants",
       },
     ],
+    materials: 'coconut wood',
     title: "Horizons coconut planter",
     video_path: "s8ZKUy6vG2U",
     dimensions: [
@@ -746,6 +776,8 @@ const CategoriesData = [
       },
     ],
     title: "Classic Teak wood soap dish",
+    materials: 'teak wood',
+
     video_path: "EjKA0zQZ7XY",
     dimensions: [
       {
@@ -796,6 +828,8 @@ const CategoriesData = [
       },
     ],
     title: "Coconut wood fork",
+    materials: 'coconut wood',
+
     video_path: "4_rKWIEMUrM",
     dimensions: [
       {

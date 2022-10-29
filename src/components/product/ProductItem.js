@@ -5,7 +5,7 @@ import PackList from "./pack/PackList";
 import { useDispatch } from "react-redux";
 import CartSlice from "../../redux/reducerSlice/CartSlice";
 
-const ProductItem = ({ data, className, search = false }) => {
+const ProductItem = ({ data, className = '', search = false }) => {
   const [typeData, setTypeData] = useState(null);
   const dispatch = useDispatch();
   function handleAddCart(data) {
@@ -19,8 +19,8 @@ const ProductItem = ({ data, className, search = false }) => {
 
   }
   return (
-    <div className={` flex flex-col ${className}`}>
-      <Link to={`./product/${data.id}`}>
+    <div className={` flex flex-col max-h-[370px] ${className}`}>
+      <Link to={`/product/${data.id}`}>
         <img src={data.image} alt="" />
         <h4 className="capitalize">{data.title}</h4>
       </Link>

@@ -8,9 +8,9 @@ import { TopbarData } from "../../data/Topbar";
 import CartButton from "../../modules/header/CartButton";
 import DropdownCart from "../../modules/header/DropdownCart";
 import { useSelector } from "react-redux";
-import { cartSelector } from "../../redux/selector";
+import { cartUserSelector } from "../../redux/selector";
 const Topbar = ({ showLogoText }) => {
-  const cartList = useSelector(cartSelector);
+  const cartList = useSelector(cartUserSelector);
   // const dropDownRef = useRef();
   // const cartButtonRef = useRef();
   const [showListCart, setShowListCart] = useState(false);

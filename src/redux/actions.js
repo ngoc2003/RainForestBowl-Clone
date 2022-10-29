@@ -12,3 +12,15 @@ export const removeCart = (data) => {
   };
 };
 
+export const filterCategories = (data) => {
+  return {
+    type: "filters/categoriesFilter",
+    payload: data,
+  };
+};
+export const filterMaterials = (data) => {
+  return {
+    type: "filters/materialsFilter",
+    payload: data,
+  };
+};

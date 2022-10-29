@@ -4,7 +4,7 @@ import ListProduct from './filter/ListProduct';
 
 const Filter = () => {
     return (
-        <div className='flex gap-5'>
+        <div className='grid grid-cols-5 gap-8 wrapper  '>
             <FilterOption></FilterOption>
             <ListProduct></ListProduct>
         </div>
