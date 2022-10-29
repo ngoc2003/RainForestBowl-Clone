@@ -7,6 +7,7 @@ import Reason from "../modules/homepage/Reason";
 import Mission from "../modules/homepage/Mission";
 import Review from "../modules/homepage/Review";
 import Coupon from "../modules/homepage/Coupon";
+import ProductLine from "../modules/homepage/ProductLine";
 
 const Homepage = () => {
   return (
@@ -18,6 +19,7 @@ const Homepage = () => {
       </Banner>
       <PopularOffer></PopularOffer>
       <BestSellers></BestSellers>
+      <ProductLine></ProductLine>
       <Process></Process>
       <Reason></Reason>
       <Mission></Mission>

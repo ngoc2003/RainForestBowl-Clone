@@ -7,6 +7,9 @@ const TabListData = [
   },
   {
     name: "wooden bowls",
+    image: Images.collection_woodenBowl,
+    path: "/collections/wooden-bowls",
+
     care: [
       {
         image: Images.sun_light,
@@ -32,6 +35,9 @@ const TabListData = [
   },
   {
     name: "coconut bowls",
+    image: Images.collection_coconut,
+    path: "/collections/coconut-bowls",
+
     care: [
       {
         image: Images.sun_light,
@@ -57,6 +63,9 @@ const TabListData = [
   },
   {
     name: "plates",
+    image: Images.collection_plates,
+    path: "/collections/wooden-plates",
+
     care: [
       {
         image: Images.sun_light_plate,
@@ -82,6 +91,9 @@ const TabListData = [
   },
   {
     name: "home",
+    image: Images.collection_cuttingBoard,
+    path: "/collections/cutting-boards",
+
     care: [
       {
         image: Images.sun_light,
@@ -108,6 +120,9 @@ const TabListData = [
   },
   {
     name: "drinkware",
+    image: Images.collection_drinkware,
+    path: "/collections/drinkware",
+
     care: [
       {
         image: Images.sun_light,
@@ -134,6 +149,8 @@ const TabListData = [
   },
   {
     name: "garden",
+    image: Images.collection_garden,
+    path: "/collections/garden",
     care: [
       {
         image: Images.water_clean,
@@ -155,6 +172,9 @@ const TabListData = [
   },
   {
     name: "soap dishes",
+    image: Images.collection_soapDishes,
+    path: "/collections/coconut-soap-dishes",
+
     care: [
       {
         image: Images.rinse_dish,
@@ -177,6 +197,8 @@ const TabListData = [
   },
   {
     name: "utensils",
+    image: Images.collection_utensils,
+    path: "/collections/wooden-utensils",
     care: [
       {
         image: Images.rinse_utensils,

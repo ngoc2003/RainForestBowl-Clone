@@ -35,6 +35,16 @@ export const Images = {
   coconut: require("./wood_type/Coconut-Wood-collections.webp"),
   olive: require("./wood_type/Olive-Wood-collections.webp"),
   teak: require("./wood_type/Teak-Wood-collections.webp"),
+  //productLine_homepage
+  productLineBg: require("./collection/product-line-bg-2.webp"),
+  collection_woodenBowl: require("./collection/product-line-wooden-bowls.webp"),
+  collection_coconut: require("./collection/product-line-coconut-bowls.webp"),
+  collection_cuttingBoard: require("./collection/product-line-cutting-boards.webp"),
+  collection_drinkware: require("./collection/product-line-drinkware.webp"),
+  collection_garden: require("./collection/product-line-garden.webp"),
+  collection_soapDishes: require("./collection/product-line-soap-dishes.webp"),
+  collection_plates: require("./collection/product-line-trays.webp"),
+  collection_utensils: require("./collection/product-line-utensils.webp"),
   //features_detail
   features_worldwide: require("./detailpage/features/icon-feature-worldwide.webp"),
   features_moneyBack: require("./detailpage/features/icon-feature-money-back.webp"),

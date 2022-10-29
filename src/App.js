@@ -18,6 +18,7 @@ function App() {
         <Routes>
           <Route element={<LayoutDefault />}>
             <Route path="/" element={<Homepage />}></Route>
+            <Route path="/collection/:collectionName" element={<Homepage />}></Route>
             <Route
               path="/product/:productId"
               element={<ProductDetail />}
