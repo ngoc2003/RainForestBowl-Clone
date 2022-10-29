@@ -7,7 +7,7 @@ const Hero = () => {
   const name = collectionName.replace("-", " ");
   const { description, image } = state;
   return (
-    <div className="wrapper py-10 flex bg-lightPink gap-x-10">
+    <div className="wrapper py-10 flex bg-lightPink gap-x-10 items-center">
       <div className="flex flex-col gap-y-5 flex-1">
         <span className="text-black text-sm">
           <a href="/" className="text-gray inline">

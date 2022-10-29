@@ -9,12 +9,13 @@ import Video from "../modules/detail/Video";
 import Instruction from "../modules/detail/Instruction";
 import Coupon from '../modules/homepage/Coupon'
 import Product from "../modules/detail/Product";
+import ScrollToTop from "../utils/ScrollToTop";
 const ProductDetail = () => {
   const { productId } = useParams();
   const data = SearchDataById(productId);
   
   return (
-    <div className="flex flex-col gap-8 py-14">
+    <ScrollToTop className="flex flex-col gap-8 py-14">
       <Product data={data}></Product>
       <Features></Features>
       <BackgroundCreative>
@@ -34,7 +35,7 @@ const ProductDetail = () => {
       <Video video_path={data.video_path}></Video>
       <Instruction categories={data.categories}></Instruction>
       <Coupon></Coupon>
-    </div>
+    </ScrollToTop>
   );
 };
 

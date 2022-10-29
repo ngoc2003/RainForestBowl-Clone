@@ -16,6 +16,7 @@ const ProductLine = () => {
                 key={v4()}
                 to={item.path}
                 state={{
+                  categories: item.name,
                   description: item.collectionDes,
                   image: item.collectionImage,
                 }}

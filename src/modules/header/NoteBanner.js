@@ -27,7 +27,6 @@ const NoteBanner = () => {
   }
   useEffect(() => {
     setData(filterDebounce);
-    console.log(search);
   }, [filterDebounce, search]);
   return (
     <div className="relative flex bg-lightFont wrapper">

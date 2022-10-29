@@ -5,6 +5,7 @@ import { v4 } from "uuid";
 import MaterialsData from "../../../data/Materials";
 import TabListData from "../../../data/TabList";
 import GetAmount from "../../../utils/GetAmount";
+import { Link, useLocation, useParams } from "react-router-dom";
 function Title({ children }) {
   return (
     <div
@@ -18,9 +19,11 @@ function Title({ children }) {
     </div>
   );
 }
-const FilterOption = ({ initialCategories = "" }) => {
+const FilterOption = () => {
+  const { state } = useLocation();
+  const name = state.categories;
   const dispatch = useDispatch();
-  const [categories, setCategories] = useState(initialCategories);
+  const [categories, setCategories] = useState(name);
   const [materials, setMaterials] = useState(
     new Array(MaterialsData.length).fill().map((item, index) => ({
       name: MaterialsData[index],
@@ -40,11 +43,13 @@ const FilterOption = ({ initialCategories = "" }) => {
       )
     );
   }
-
-  function handleSetCategories(value) {
-    setCategories(value);
-    dispatch(FilterSlice.actions.categoriesFilter(value));
+  function handleSetCategories(cateName) {
+    setCategories(cateName);
+    dispatch(FilterSlice.actions.categoriesFilter(cateName));
   }
+  useEffect(() => {
+    handleSetCategories(name);
+  }, [name]);
   return (
     <div>
       <div className=" grid gap-5 ">
@@ -52,16 +57,21 @@ const FilterOption = ({ initialCategories = "" }) => {
         <div>
           <Title>Categories</Title>
           {TabListData.map((item) => (
-            <div
+            <Link
+              to={item.path}
+              state={{
+                categories: item.name,
+                description: item.collectionDes,
+                image: item.collectionImage,
+              }}
               className={`flex cursor-pointer text-[#000]  capitalize mb-2 justify-between ${
                 item.name === categories ? "font-semibold" : "opacity-70"
               }`}
               key={v4()}
-              onClick={() => handleSetCategories(item.name)}
             >
               {item.name}
               <span>({GetAmount(item.name)})</span>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="border-b border-lightGray"></div>

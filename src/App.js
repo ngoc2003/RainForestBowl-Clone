@@ -14,24 +14,19 @@ const Error = lazy(() => import("./components/Error"));
 
 function App() {
   return (
-    <ScrollToTop>
-      <Suspense>
-        <Routes>
-          <Route element={<LayoutDefault />}>
-            <Route path="/" element={<Homepage />}></Route>
-            <Route
-              path="/collections/:collectionName"
-              element={<Collection />}
-            ></Route>
-            <Route
-              path="/product/:productId"
-              element={<ProductDetail />}
-            ></Route>
-          </Route>
-          <Route path="*" element={<Error />}></Route>
-        </Routes>
-      </Suspense>
-    </ScrollToTop>
+    <Suspense>
+      <Routes>
+        <Route element={<LayoutDefault />}>
+          <Route
+            path="/collections/:collectionName"
+            element={<Collection />}
+          ></Route>
+          <Route path="/" element={<Homepage />}></Route>
+          <Route path="/product/:productId" element={<ProductDetail />}></Route>
+        </Route>
+        <Route path="*" element={<Error />}></Route>
+      </Routes>
+    </Suspense>
   );
 }
 

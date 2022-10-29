@@ -8,10 +8,11 @@ import Mission from "../modules/homepage/Mission";
 import Review from "../modules/homepage/Review";
 import Coupon from "../modules/homepage/Coupon";
 import ProductLine from "../modules/homepage/ProductLine";
+import ScrollToTop from "../utils/ScrollToTop";
 
 const Homepage = () => {
   return (
-    <div className="flex flex-col gap-y-[50px]">
+    <ScrollToTop className="flex flex-col gap-y-[50px]">
       <Banner className="wrapper">
         One-of-a-Kind Wabi <br />
         Sabi Kitchenware <br />
@@ -25,7 +26,7 @@ const Homepage = () => {
       <Mission></Mission>
       <Review></Review>
       <Coupon></Coupon>
-    </div>
+    </ScrollToTop>
   );
 };
 
