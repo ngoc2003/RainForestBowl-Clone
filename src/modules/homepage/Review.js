@@ -4,7 +4,7 @@ import ReviewList from "../../components/review/ReviewList";
 
 const Review = () => {
   return (
-    <div>
+    <div className='wrapper'>
       <Heading>real customer review</Heading>
       <ReviewList></ReviewList>
     </div>

@@ -7,7 +7,15 @@ const TabListData = [
   },
   {
     name: "wooden bowls",
-    image: Images.collection_woodenBowl,
+    image: Images.productLine_woodenBowl,
+    collectionDes: [
+      "Raw materials sourced from regulated, legal plantations",
+      "Hand-carved by local artisans from Vietnam, Tunisia, and Indonesia",
+      "Durable, elegant, and easy to clean and maintain",
+      "Safe to use with food, hot or cold items",
+    ],
+    collectionImage: Images.woodenBowls_collection,
+
     path: "/collections/wooden-bowls",
 
     care: [
@@ -35,7 +43,13 @@ const TabListData = [
   },
   {
     name: "coconut bowls",
-    image: Images.collection_coconut,
+    image: Images.productLine_coconut,
+    collectionDes: [
+      "Made from organic coconut shells, coated with food-safe coconut oils",
+      "Durable and long-lasting, compatible with warm and cold foods",
+      "We plant 1 tree for every product sold & have planted over 100K trees.",
+    ],
+    collectionImage: Images.coconutBowls_collection,
     path: "/collections/coconut-bowls",
 
     care: [
@@ -63,7 +77,14 @@ const TabListData = [
   },
   {
     name: "plates",
-    image: Images.collection_plates,
+    image: Images.productLine_plates,
+    collectionDes: [
+      "Sustainably processed wood from regulated plantations, not rainforests",
+      "Each product sold = 1 tree planted in Vietnam and Africa",
+      "Handmade by artisans from developing regions",
+      "Easy to maintain to keep the rich wood color and graining",
+    ],
+    collectionImage: Images.plates_collection,
     path: "/collections/wooden-plates",
 
     care: [
@@ -91,7 +112,13 @@ const TabListData = [
   },
   {
     name: "home",
-    image: Images.collection_cuttingBoard,
+    image: Images.productLine_cuttingBoard,
+    collectionDes: [
+      "End-grain wood chopping boards to protect knives",
+      "Naturally resistant to bacteria, good for raw meat and fresh produce",
+      "Made with real olive wood and teak wood harvested from regulated plantations",
+    ],
+    collectionImage: Images.cuttingBoards_collection,
     path: "/collections/cutting-boards",
 
     care: [
@@ -120,7 +147,14 @@ const TabListData = [
   },
   {
     name: "drinkware",
-    image: Images.collection_drinkware,
+    image: Images.productLine_drinkware,
+    collectionDes: [
+      "Wooden drinkware for coffee, tea, and wine",
+      "Made with non-porous, high-quality wood",
+      "Safe to use with hot and cold drinks",
+      "Rich in natural wood colors that do not fade over time",
+    ],
+    collectionImage: Images.drinkware_collection,
     path: "/collections/drinkware",
 
     care: [
@@ -149,7 +183,13 @@ const TabListData = [
   },
   {
     name: "garden",
-    image: Images.collection_garden,
+    image: Images.productLine_garden,
+    collectionDes: [
+      "Handmade garden decor from upcycled coconut shells",
+      "Made in Vietnam by local artisans",
+      "Easy setu, non-toxic to humans and animals",
+    ],
+    collectionImage: Images.garden_collection,
     path: "/collections/garden",
     care: [
       {
@@ -172,7 +212,14 @@ const TabListData = [
   },
   {
     name: "soap dishes",
-    image: Images.collection_soapDishes,
+    image: Images.productLine_soapDishes,
+    collectionDes: [
+      "Hand-carved by artisans in Vietnam into one-of-a-kind designs",
+      "Comes with drainage holes to preserve soap",
+      "Made with eco-friiendly upcycled coconut shells",
+      "We plant 1 tree in Vietnam and Africa with each product we sell",
+    ],
+    collectionImage: Images.soapDishes_collection,
     path: "/collections/coconut-soap-dishes",
 
     care: [
@@ -197,7 +244,13 @@ const TabListData = [
   },
   {
     name: "utensils",
-    image: Images.collection_utensils,
+    image: Images.productLine_utensils,
+    collectionDes: [
+      "Stylish and rustic wooden utensils for daily use",
+      "Artisan-made from Vietnam, Tunisia, and Indonesia",
+      "Baby-friendly and safe to use with food",
+    ],
+    collectionImage: Images.utensils_collection,
     path: "/collections/wooden-utensils",
     care: [
       {

@@ -9,6 +9,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 // Page
 const Homepage = lazy(() => import("./pages/Homepage"));
 const ProductDetail = lazy(() => import("./pages/ProductDetail"));
+const Collection = lazy(() => import("./pages/Collection"));
 const Error = lazy(() => import("./components/Error"));
 
 function App() {
@@ -18,7 +19,10 @@ function App() {
         <Routes>
           <Route element={<LayoutDefault />}>
             <Route path="/" element={<Homepage />}></Route>
-            <Route path="/collection/:collectionName" element={<Homepage />}></Route>
+            <Route
+              path="/collections/:collectionName"
+              element={<Collection />}
+            ></Route>
             <Route
               path="/product/:productId"
               element={<ProductDetail />}

@@ -15,6 +15,10 @@ const ProductLine = () => {
               <Link
                 key={v4()}
                 to={item.path}
+                state={{
+                  description: item.collectionDes,
+                  image: item.collectionImage,
+                }}
                 style={{
                   background: `url(${Images.productLineBg}) center center/ contain no-repeat`,
                 }}
