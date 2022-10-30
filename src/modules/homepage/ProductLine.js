@@ -8,7 +8,7 @@ const ProductLine = () => {
   return (
     <div>
       <Heading>Browse Our Product Line</Heading>
-      <div className=" grid grid-cols-6 gap-10 wrapper">
+      <div className="grid grid-cols-4 gap-10 md:grid-cols-6 wrapper">
         {TabListData.map(
           (item) =>
             item.image && (
@@ -30,7 +30,7 @@ const ProductLine = () => {
                   className="duration-200 w-full max-w-[180px] hover:scale-110"
                   alt=""
                 />
-                <h4 className="font-semibold capitalize text-center text-lg">
+                <h4 className="text-base font-semibold text-center capitalize xl:text-lg">
                   {item.name}
                 </h4>
               </Link>

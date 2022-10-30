@@ -9,7 +9,7 @@ const PopularOffer = () => {
   return (
     <div className="wrapper">
       <Heading>our most popular offers</Heading>
-      <div className="flex gap-8">
+      <div className="flex flex-col gap-8 md:flex-row">
         <div className="flex-1">
           <Link to="/">
             <img src={own_set} alt="" className="rounded-2xl hover-img" />

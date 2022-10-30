@@ -3,7 +3,7 @@ import { v4 } from "uuid";
 import Button from "../../components/button/Button";
 import ProductCartItem from "../../components/product/ProductCartItem";
 const DropdownCart = React.forwardRef((props, ref) => {
-  const { data, className, ...other } = props;
+  const { data, className, text=true, ...other } = props;
   const shippingCost = 5;
   const price = data
     .reduce(
@@ -19,7 +19,7 @@ const DropdownCart = React.forwardRef((props, ref) => {
     >
       {data.length > 0 ? (
         <>
-          <div className='max-h-[200px] overflow-y-auto'>
+          <div className="max-h-[200px] overflow-y-auto">
             {data.map((item) => (
               <ProductCartItem data={item} key={v4()}></ProductCartItem>
             ))}

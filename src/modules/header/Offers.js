@@ -4,7 +4,7 @@ import PrimaryText from "../../components/PrimaryText";
 
 const Offers = () => {
   return (
-    <div className="flex justify-between py-3 border-b shadow-md wrapper border-b-borderColor">
+    <div className="flex justify-between py-3 text-sm border-b shadow-md wrapper border-b-borderColor">
       <div className="flex flex-col items-center">
         <PrimaryText>4 Straws Free ($10 Value)</PrimaryText>
         on order $25+

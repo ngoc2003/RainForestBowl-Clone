@@ -23,7 +23,7 @@ const BestSellers = () => {
   }
 
   return (
-    <div className="text-font wrapper">
+    <div className="overflow-hidden text-font wrapper">
       <Heading>shop our BestSellers</Heading>
       <TabList>
         {TabListData.map((tab) => (

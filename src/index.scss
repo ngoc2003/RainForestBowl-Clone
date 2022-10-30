@@ -8,7 +8,7 @@
 }
 @layer base {
   body {
-    @apply text-base font-normal text-black font-sans;
+    @apply text-sm xl:text-base font-normal text-black font-sans;
   }
   input {
     @apply outline-none;
@@ -17,10 +17,21 @@
 
 @layer components {
   .wrapper {
-    @apply px-16;
+    // @apply px-16;
+    padding: 0 4%;
   }
   .link-hover {
-    @apply duration-300 hover:font-bold cursor-pointer;
+    @apply duration-300 xl:hover:font-bold cursor-pointer relative;
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      opacity: 0;
+      @apply bg-black absolute -bottom-0.5 right-0 left-0 duration-300;
+    }
+    &:hover::after {
+      @apply opacity-100 xl:opacity-0;
+    }
   }
   .hover-img {
     //@appy duration-200 hover:scale-105

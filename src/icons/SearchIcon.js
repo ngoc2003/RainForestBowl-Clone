@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchIcon = () => {
+const SearchIcon = ({onClick = () => {}}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +8,8 @@ const SearchIcon = () => {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="w-6 h-6"
+      className="w-6 h-6 cursor-pointer"
+      onClick ={onClick}
     >
       <path
         strokeLinecap="round"

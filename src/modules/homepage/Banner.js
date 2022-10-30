@@ -10,8 +10,8 @@ const Banner = ({
 }) => {
   return (
     <div className={className}>
-      <div className={`flex my-8 rounded-[3px] overflow-hidden font-semibold  gap-x-5 w-full ${background}`}>
-        <div className="flex flex-col justify-center max-w-[500px] pl-12 pr-10 text-3xl gap-y-4 py-8">
+      <div className={`flex my-8 rounded-[3px] overflow-hidden font-semibold  gap-x-5 w-full flex-col lg:flex-row ${background}`}>
+        <div className="flex flex-col justify-center lg:max-w-[500px] pl-12 pr-10 text-xl md:text-2xl lg:text-3xl gap-y-4 py-8 flex-1 text-center lg:text-left">
           <div>{children}</div>
           <Button className="text-xl" secondary fluid>
             {buttonText}

@@ -4,6 +4,7 @@ import AddButton from "../button/AddButton";
 import PackList from "./pack/PackList";
 import { useDispatch } from "react-redux";
 import CartSlice from "../../redux/reducerSlice/CartSlice";
+import Button from "../button/Button";
 
 const ProductItem = ({ data, className = "", search = false }) => {
   const [typeData, setTypeData] = useState(null);
@@ -18,7 +19,7 @@ const ProductItem = ({ data, className = "", search = false }) => {
     );
   }
   return (
-    <div className={` flex flex-col h-[380px] ${className}`}>
+    <div className={` flex flex-col ${!search && " h-[330px] xl:h-[380px]"} ${className}`}>
       <Link to={`/product/${data.id}`}>
         <img src={data.image} alt="" className="w-full" />
         <h4 className="capitalize">{data.title}</h4>
@@ -30,9 +31,9 @@ const ProductItem = ({ data, className = "", search = false }) => {
             className="flex-1 mb-3"
             setTypeData={setTypeData}
           ></PackList>
-          <AddButton primary onClick={() => handleAddCart(data)}>
+          <Button primary fluid onClick={() => handleAddCart(data)}>
             Add to cart
-          </AddButton>
+          </Button>
         </>
       )}
     </div>

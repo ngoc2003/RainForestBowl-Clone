@@ -14,8 +14,8 @@ const Homepage = () => {
   return (
     <ScrollToTop className="flex flex-col gap-y-[50px]">
       <Banner className="wrapper">
-        One-of-a-Kind Wabi <br />
-        Sabi Kitchenware <br />
+        One-of-a-Kind Wabi 
+        Sabi Kitchenware 
         (Made Sustainably)
       </Banner>
       <PopularOffer></PopularOffer>

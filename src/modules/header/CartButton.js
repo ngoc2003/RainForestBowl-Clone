@@ -3,7 +3,7 @@ import Button from "../../components/button/Button";
 import Cart from "../../icons/Cart";
 
 const CartButton = React.forwardRef((props, ref) => {
-  const { className, onClick = () => {}, amount } = props
+  const { className, onClick = () => {}, amount, text = true } = props
   return (
     <Button primary onClick={onClick}>
       <div className="relative">
@@ -14,7 +14,9 @@ const CartButton = React.forwardRef((props, ref) => {
           {amount}
         </span>
       </div>
-      Cart
+      {
+        text && 'Cart'
+      }
     </Button>
   );
 });
