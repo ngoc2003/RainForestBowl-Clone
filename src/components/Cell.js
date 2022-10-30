@@ -1,7 +1,7 @@
 import React from "react";
 
-const Cell = () => {
-  return <div className="border-r border-r-borderColor border-dashed"></div>;
+const Cell = ({className}) => {
+  return <div className={`border-r border-dashed border-r-borderColor ${className}`}></div>;
 };
 
 export default Cell;

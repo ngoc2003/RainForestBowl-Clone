@@ -25,7 +25,7 @@ const PackList = ({ data, className = "", setTypeData = () => {} }) => {
   return (
     <div className={` flex-1 flex justify-end flex-col ${className}`}>
       <h3 className="mt-1 font-semibold">{cost && `$${cost}`}</h3>
-      <div className="flex gap-y-5">
+      <div className="flex">
         {data.map((pack) => (
           <PackItem
             onClick={(e) => handleActivePack(e, pack)}

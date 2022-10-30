@@ -12,14 +12,17 @@ import Bar from "../../icons/Bar";
 import SearchGroup from "../../modules/header/SearchGroup";
 import SearchIcon from "../../icons/SearchIcon";
 import Close from "../../icons/Close";
+import Button from "../../components/button/Button";
 const Topbar = ({ showLogoText }) => {
   const cartList = useSelector(cartUserSelector);
   const desktop = useMediaQuery("(min-width:991px)");
+  const miniPhone = useMediaQuery("(max-width:500px)");
   const [showListCart, setShowListCart] = useState(false);
   const [showSideBar, setShowSideBar] = useState(false);
   const [showSearchPhone, setShowSearchPhone] = useState(false);
   function handleToggleSearchPhone() {
     setShowSearchPhone(true);
+    setShowSideBar(false)
   }
   function handleToggleListCart() {
     setShowListCart(!showListCart);
@@ -40,17 +43,17 @@ const Topbar = ({ showLogoText }) => {
       ></Bar>
       <Link
         to="/"
-        className="absolute flex-1 -translate-x-1/2 left-1/2 xl:top-3 xl:translate-x-0 xl:left-[4%] "
+        className="absolute flex-1 -translate-x-1/2 left-1/2 xl:top-3 xl:translate-x-0 xl:left-[4%] w-[100px] xs:w-auto"
       >
         {showLogoText ? (
-          <img className="mx-auto" src={logoText} alt="" />
+          <img className="w-full mx-auto" src={logoText} alt="" />
         ) : (
-          <img className="mx-auto" src={logo} alt="" />
+          <img className="w-full mx-auto" src={logo} alt="" />
         )}
       </Link>
       <div className="xl:block w-[200px] hidden"></div>
       <div
-        className={`duration-300 fixed top-0 h-screen xl:h-auto shadow-md xl:shadow-none left-0 flex flex-col items-center flex-1 p-10 -translate-x-full bg-white xl:justify-between xl:static xl:flex-row xl:p-0 gap-y-8 xl:translate-x-0 ${
+        className={`duration-300 fixed top-0 h-screen xl:h-auto shadow-md xl:shadow-none left-0 flex flex-col items-center flex-1 p-10 -translate-x-full bg-white xl:justify-between xl:static xl:flex-row xl:p-0 gap-y-8 xl:translate-x-0 z-40 ${
           showSideBar && "translate-x-0"
         }`}
       >
@@ -65,6 +68,13 @@ const Topbar = ({ showLogoText }) => {
             </span>
           )
         )}
+        {
+          miniPhone && (
+            <Button primary fluid onClick={handleToggleSearchPhone}>
+              <SearchIcon></SearchIcon>
+            </Button>
+          )
+        }
       </div>
       {showSearchPhone && (
         <>
@@ -76,7 +86,7 @@ const Topbar = ({ showLogoText }) => {
             <div className="px-5 py-3 mx-auto border rounded-md border-lightGray">
               <SearchGroup
                 center
-                className="w-[80%] min-w-[350px]"
+                className="md:w-[350px] w-[200px]"
               ></SearchGroup>
               <Close
                 onClick={() => setShowSearchPhone(false)}
@@ -87,7 +97,7 @@ const Topbar = ({ showLogoText }) => {
         </>
       )}
       <div className="relative flex items-center gap-x-5">
-        {!desktop && <SearchIcon onClick={handleToggleSearchPhone} />}
+        {!desktop && !miniPhone && <SearchIcon onClick={handleToggleSearchPhone} />}
         <CartButton
           amount={cartList.length}
           onClick={handleToggleListCart}

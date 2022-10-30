@@ -5,7 +5,7 @@ import Cart from "../../icons/Cart";
 const CartButton = React.forwardRef((props, ref) => {
   const { className, onClick = () => {}, amount, text = true } = props
   return (
-    <Button primary onClick={onClick}>
+    <Button primary onClick={onClick} >
       <div className="relative">
         <Cart></Cart>
         <span
