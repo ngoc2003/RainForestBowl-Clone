@@ -4,8 +4,10 @@ import TabItem from "../../components/tab/TabItem";
 import TabList from "../../components/tab/TabList";
 import ReasonData from "../../data/ReasonData";
 import Banner from "../../modules/homepage/Banner";
+import useMediaQuery from '../../hooks/useMediaQuery'
 import {v4} from 'uuid'
 const Reason = () => {
+  const desktop = useMediaQuery('(min-width:800px)')
   const [activeTab, setActiveTab] = useState(ReasonData[0].name);
   const [data, setData] = useState(ReasonData[0]);
   function handleSetData(tab) {
@@ -37,16 +39,16 @@ const Reason = () => {
               active={activeTab === tab.name.toLowerCase()}
               key={tab.name}
               onClick={() => handleChangeTabActive(tab.name)}
-              className="flex-1 h-16"
+              className="flex-1 h-10 xl:h-16 min-w-[90px]"
             ></TabItem>
-            <span className="block mt-2 text-xl font-semibold text-center capitalize">
+            <span className="block mt-2 font-semibold text-center capitalize lg:text-lg xl:text-xl whitespace-nowrap">
               {tab.name}
             </span>
           </div>
         ))}
       </TabList>
       <Banner image={data.image} background='bg-lightPink' buttonText={`shop ${data.title} products`}>
-        <h4 className="mb-5 text-4xl capitalize">{data.title}</h4>
+        <Heading center={!desktop} className="mb-3 capitalize xl:mb-5">{data.title}</Heading>
         <p className="mb-2 text-base font-light">{data.text}</p>
       </Banner>
     </div>

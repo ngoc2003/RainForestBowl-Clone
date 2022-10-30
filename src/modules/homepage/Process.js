@@ -9,7 +9,7 @@ const Process = () => {
   return (
     <>
       <BackgroundCreative>
-        <div className="flex flex-col gap-8 wrapper sm:flex-row ">
+        <div className="flex flex-col gap-8 wrapper lg:flex-row ">
           <div className="flex-1">
             <img src={process} className="object-cover w-full" alt="" />
           </div>

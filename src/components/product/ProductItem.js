@@ -19,7 +19,7 @@ const ProductItem = ({ data, className = "", search = false }) => {
     );
   }
   return (
-    <div className={` flex flex-col ${!search && " h-[330px] xl:h-[380px]"} ${className}`}>
+    <div className={` flex flex-col  ${!search && " h-[330px] xl:h-[385px]"} ${className} items-stretch`}>
       <Link to={`/product/${data.id}`}>
         <img src={data.image} alt="" className="w-full" />
         <h4 className="capitalize">{data.title}</h4>

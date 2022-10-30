@@ -25,12 +25,27 @@ const ReviewList = ({ className }) => {
     <Swiper
       ref={sliderRef}
       grabCursor="true"
-      slidesPerView={5}
+      slidesPerView={1}
       spaceBetween={40}
       className={`relative ${className}`}
       navigation={{
         prevEl: ".prev",
         nextEl: ".next",
+      }}
+      breakpoints={{
+        400: {
+          slidesPerView: 2,
+
+        },
+        600: {
+          slidesPerView: 3,
+        },
+        800: {
+          slidesPerView: 4,
+        },
+        1440: {
+          slidesPerView: 5,
+        },
       }}
     >
       <div className="prev navi" onClick={handlePrev}>

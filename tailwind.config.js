@@ -9,6 +9,7 @@ module.exports = {
       llg: "940px",
       lg: "800px",
       md: "600px",
+      sm:"400px"
     },
     extend: {
       colors: {
