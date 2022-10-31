@@ -2,14 +2,6 @@ import React from "react";
 import SearchIcon from "../../icons/SearchIcon";
 import PropTypes from "prop-types";
 
-Search.propTypes = {
-  placeholder: PropTypes.string,
-  icon: PropTypes.bool,
-  right: PropTypes.bool,
-  onChange: PropTypes.func,
-  onBlur: PropTypes.func,
-  value: PropTypes.string,
-};
 const Search = ({
   placeholder = "Search",
   className,
@@ -40,5 +32,12 @@ const Search = ({
     </div>
   );
 };
-
+Search.propTypes = {
+  placeholder: PropTypes.string,
+  icon: PropTypes.bool,
+  right: PropTypes.bool,
+  onChange: PropTypes.func,
+  onBlur: PropTypes.func,
+  value: PropTypes.string,
+};
 export default Search;

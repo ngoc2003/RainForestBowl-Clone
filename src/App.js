@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import "swiper/scss";
 import "swiper/css/navigation";
 import React, { lazy, Suspense } from "react";

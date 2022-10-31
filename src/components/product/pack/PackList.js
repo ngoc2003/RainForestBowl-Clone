@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import PackItem from "./PackItem";
-import Button from "../../button/Button";
 import PropTypes from "prop-types";
 
 const PackList = ({ data, className = "", setTypeData = () => {} }) => {
