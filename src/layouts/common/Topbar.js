@@ -22,7 +22,7 @@ const Topbar = ({ showLogoText }) => {
   const [showSearchPhone, setShowSearchPhone] = useState(false);
   function handleToggleSearchPhone() {
     setShowSearchPhone(true);
-    setShowSideBar(false)
+    setShowSideBar(false);
   }
   function handleToggleListCart() {
     setShowListCart(!showListCart);
@@ -32,6 +32,7 @@ const Topbar = ({ showLogoText }) => {
     setShowSideBar(false);
     setShowSearchPhone(false);
   });
+
   function handleToggleSideBar() {
     setShowSideBar(true);
   }
@@ -52,6 +53,12 @@ const Topbar = ({ showLogoText }) => {
         )}
       </Link>
       <div className="xl:block w-[200px] hidden"></div>
+      {showSideBar && (
+        <div
+          className="fixed bg-[#000] opacity-60 inset-0 z-[39]"
+          onClick={() => setShowSideBar(false)}
+        ></div>
+      )}
       <div
         className={`duration-300 fixed top-0 h-screen xl:h-auto shadow-md xl:shadow-none left-0 flex flex-col items-center flex-1 p-10 -translate-x-full bg-white xl:justify-between xl:static xl:flex-row xl:p-0 gap-y-8 xl:translate-x-0 z-40 ${
           showSideBar && "translate-x-0"
@@ -59,22 +66,29 @@ const Topbar = ({ showLogoText }) => {
       >
         {TopbarData.map((item) =>
           item.path ? (
-            <Link to={item.path} key={item.id} className="link-hover">
+            <Link
+              to={item.path}
+              key={item.id}
+              className="link-hover"
+              onClick={() => setShowSideBar(false)}
+            >
               {item.label}
             </Link>
           ) : (
-            <span className="link-hover" key={item.id}>
+            <span
+              className="link-hover"
+              key={item.id}
+              onClick={() => setShowSideBar(false)}
+            >
               {item.label}
             </span>
           )
         )}
-        {
-          miniPhone && (
-            <Button primary fluid onClick={handleToggleSearchPhone}>
-              <SearchIcon></SearchIcon>
-            </Button>
-          )
-        }
+        {miniPhone && (
+          <Button primary fluid onClick={handleToggleSearchPhone}>
+            <SearchIcon></SearchIcon>
+          </Button>
+        )}
       </div>
       {showSearchPhone && (
         <>
@@ -97,7 +111,9 @@ const Topbar = ({ showLogoText }) => {
         </>
       )}
       <div className="flex items-center md:relative gap-x-5">
-        {!desktop && !miniPhone && <SearchIcon onClick={handleToggleSearchPhone} />}
+        {!desktop && !miniPhone && (
+          <SearchIcon onClick={handleToggleSearchPhone} />
+        )}
         <CartButton
           amount={cartList.length}
           onClick={handleToggleListCart}

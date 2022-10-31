@@ -17,7 +17,7 @@ const Header = () => {
       </div>
       <div
         className={`fixed  top-0 left-0 right-0  duration-300 ${
-          scroll ? "translate-y-0 opacity-1 z-10" : "-translate-y-full -z-10 opacity-0"
+          scroll ? "translate-y-0 opacity-1 z-20" : "-translate-y-full -z-10 opacity-0"
         } `}
       >
         <Topbar showLogoText={scroll}></Topbar>

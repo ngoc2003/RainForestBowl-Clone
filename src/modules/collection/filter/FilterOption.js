@@ -19,7 +19,7 @@ function Title({ children }) {
     </div>
   );
 }
-const FilterOption = () => {
+const FilterOption = ({ showMobile, onClick = () => {} }) => {
   const { state } = useLocation();
   const name = state.categories;
 
@@ -53,7 +53,12 @@ const FilterOption = () => {
   }, [name]);
   return (
     <div>
-      <div className=" grid gap-5 ">
+      <div
+        className={`md:static absolute left-0 right-0 z-10 grid gap-5 p-5 bg-white opacity-0 md:opacity-100 ${
+          showMobile && "opacity-100 shadow-md"
+        }`}
+        onClick={onClick}
+      >
         {/* FilterByCategories */}
         <div>
           <Title>Categories</Title>
@@ -89,7 +94,7 @@ const FilterOption = () => {
                   value={item}
                   checked={materials[index].checked}
                   onChange={() => handleSetMaterials(index)}
-                  className="outline-none border w-5 h-5 mr-2"
+                  className="w-5 h-5 mr-2 border outline-none"
                 />
                 <span>{item}</span>
               </span>
