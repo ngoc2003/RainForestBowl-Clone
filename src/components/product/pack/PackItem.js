@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const PackItem = ({ pack, active = "", onClick = () => {} }) => {
   return (
@@ -13,6 +14,12 @@ const PackItem = ({ pack, active = "", onClick = () => {} }) => {
       {pack.name}
     </div>
   );
+};
+
+PackItem.propTypes = {
+  pack: PropTypes.object.isRequired,
+  active: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default PackItem;

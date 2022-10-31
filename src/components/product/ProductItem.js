@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import AddButton from "../button/AddButton";
 import PackList from "./pack/PackList";
 import { useDispatch } from "react-redux";
 import CartSlice from "../../redux/reducerSlice/CartSlice";
 import Button from "../button/Button";
+import PropTypes from "prop-types";
+
 
 const ProductItem = ({ data, className = "", search = false }) => {
   const [typeData, setTypeData] = useState(null);
@@ -39,5 +40,9 @@ const ProductItem = ({ data, className = "", search = false }) => {
     </div>
   );
 };
-
+ProductItem.propTypes = {
+  data: PropTypes.object.isRequired,
+  className: PropTypes.string,
+  search: PropTypes.bool
+}
 export default ProductItem;

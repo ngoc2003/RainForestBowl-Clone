@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PackItem from "./PackItem";
 import Button from "../../button/Button";
+import PropTypes from "prop-types";
+
 const PackList = ({ data, className = "", setTypeData = () => {} }) => {
   const [activePack, setActivePack] = useState("");
   const [cost, setCost] = useState("");
@@ -37,5 +39,9 @@ const PackList = ({ data, className = "", setTypeData = () => {} }) => {
     </div>
   );
 };
-
+PackList.propTypes = {
+  data: PropTypes.array.isRequired,
+  className: PropTypes.string,
+  setTypeData: PropTypes.func,
+};
 export default PackList;

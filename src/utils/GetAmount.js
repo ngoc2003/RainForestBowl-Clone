@@ -1,4 +1,3 @@
-import React from "react";
 import CategoriesData from "../data/Categories";
 
 const GetAmount = (name, field = "categories") => {

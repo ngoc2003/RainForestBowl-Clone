@@ -1,5 +1,3 @@
-import React from "react";
-import { v4 } from "uuid";
 import { Images } from "../images/Images";
 let id = 123456;
 const CategoriesData = [

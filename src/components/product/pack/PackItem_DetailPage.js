@@ -1,5 +1,6 @@
 import React from "react";
 import Check from "../../../icons/Check";
+import PropTypes from "prop-types";
 
 const PackItemDetailPage = ({
   num_pack,
@@ -33,10 +34,25 @@ const PackItemDetailPage = ({
           </div>
         </div>
       ) : (
-        <div onClick={onClick} className={`cursor-pointer inline-block pb-2 font-semibold capitalize ${active ? 'border-b-4 border-b-orange' :'text-lightGray'}`}>{children}</div>
+        <div
+          onClick={onClick}
+          className={`cursor-pointer inline-block pb-2 font-semibold capitalize ${
+            active ? "border-b-4 border-b-orange" : "text-lightGray"
+          }`}
+        >
+          {children}
+        </div>
       )}
     </>
   );
+};
+
+PackItemDetailPage.propTypes = {
+  tab_table: PropTypes.bool,
+  active: PropTypes.bool,
+  price: PropTypes.number,
+  num_pack: PropTypes.number,
+  onClick: PropTypes.func,
 };
 
 export default PackItemDetailPage;

@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-pascal-case */
 import React from "react";
-import imgBg from "../../images/homepage/vector-top-pink.webp";
 import process from "../../images/homepage/sustainable-process.webp";
 import ProcessData from "../../data/Process";
 import ProcessItem from "../../components/process/ProcessItem";

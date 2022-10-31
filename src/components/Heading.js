@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Heading = ({ children, center = true, className }) => {
   return (
@@ -11,5 +12,8 @@ const Heading = ({ children, center = true, className }) => {
     </h4>
   );
 };
+Heading.propTypes = {
+  center: PropTypes.bool
+}
 
 export default Heading;

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {useState } from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import logo from "../../images/logo.svg";
 import logoText from "../../images/logoText.svg";

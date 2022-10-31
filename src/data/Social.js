@@ -1,4 +1,3 @@
-import React from 'react';
 import { Images } from '../images/Images';
 
 const SocialData = [

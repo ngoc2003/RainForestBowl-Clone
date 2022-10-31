@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import Close from "../../icons/Close";
 import CartSlice from "../../redux/reducerSlice/CartSlice";
+import PropTypes from "prop-types";
 
 const ProductCartItem = ({ data, className }) => {
   const dispatch = useDispatch();
@@ -25,4 +26,8 @@ const ProductCartItem = ({ data, className }) => {
   );
 };
 
+ProductCartItem.propTypes = {
+  data: PropTypes.object,
+  className: PropTypes.string,
+};
 export default ProductCartItem;

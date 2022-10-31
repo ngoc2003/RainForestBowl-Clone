@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Button = ({
   children = "text",
@@ -47,6 +48,18 @@ const Button = ({
       )}
     </>
   );
+};
+
+Button.propTypes = {
+  primary: PropTypes.bool,
+  secondary: PropTypes.bool,
+  outline: PropTypes.bool,
+  creative: PropTypes.bool,
+  yellow: PropTypes.bool,
+  fluid: PropTypes.bool,
+  type: PropTypes.string,
+  to: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default Button;

@@ -1,6 +1,5 @@
 import React from "react";
 import BackgroundAttemp from "../../components/BackgroundAttemp";
-import bg from "../../images/care/care-instruction-bg-white.webp";
 import TabListData from "../../data/TabList";
 import { v4 } from "uuid";
 const Instruction = ({ categories }) => {

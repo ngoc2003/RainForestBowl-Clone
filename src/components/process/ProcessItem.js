@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const ProcessItem = ({ title = "", children, link = "/", titleLink = "" }) => {
   return (
@@ -9,11 +9,22 @@ const ProcessItem = ({ title = "", children, link = "/", titleLink = "" }) => {
         {title}
       </span>
       {children}{" "}
-      <a href={link} target="_blank" className="capitalize text-blue" rel="noreferrer">
+      <a
+        href={link}
+        target="_blank"
+        className="capitalize text-blue"
+        rel="noreferrer"
+      >
         {titleLink}
       </a>
     </div>
   );
+};
+
+ProcessItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  titleLink: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 };
 
 export default ProcessItem;

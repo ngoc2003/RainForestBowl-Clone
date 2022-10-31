@@ -4,7 +4,6 @@ import "swiper/css/navigation";
 import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import LayoutDefault from "./layouts/LayoutDefault";
-import ScrollToTop from "./utils/ScrollToTop";
 
 // Page
 const Homepage = lazy(() => import("./pages/Homepage"));

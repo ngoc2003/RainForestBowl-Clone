@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import BannerList from "../../components/banner/BannerList";
 import { NoteBannerData } from "../../data/NoteBanner";
 import SearchGroup from "./SearchGroup";
