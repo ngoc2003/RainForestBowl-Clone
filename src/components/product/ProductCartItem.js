@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import Close from "../../icons/Close";
 import CartSlice from "../../redux/reducerSlice/CartSlice";
 
-const ProductCartItem = ({ data }) => {
+const ProductCartItem = ({ data, className }) => {
   const dispatch = useDispatch();
   function handleDeleteCart(id) {
     dispatch(CartSlice.actions.remove(id));

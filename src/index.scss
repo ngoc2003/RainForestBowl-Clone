@@ -14,12 +14,40 @@
     @apply outline-none;
   }
 }
+.responsiveItem {
+  @apply gap-5 pb-5   flex-nowrap  overflow-hidden;
 
+  @media (min-width: 1500px) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (min-width: 360px) {
+    display: grid !important;
+  }
+  @media (max-width: 360px) {
+    overflow-x: scroll;
+  }
+  display: flex;
+  gap: 20px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
 @layer components {
   .wrapper {
     // @apply px-16;
     padding: 0 4%;
   }
+
   .link-hover {
     @apply duration-300 xl:hover:font-bold cursor-pointer relative;
     &::after {

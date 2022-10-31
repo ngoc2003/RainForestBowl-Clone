@@ -96,7 +96,7 @@ const Topbar = ({ showLogoText }) => {
           </div>
         </>
       )}
-      <div className="relative flex items-center gap-x-5">
+      <div className="flex items-center md:relative gap-x-5">
         {!desktop && !miniPhone && <SearchIcon onClick={handleToggleSearchPhone} />}
         <CartButton
           amount={cartList.length}

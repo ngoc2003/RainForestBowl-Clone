@@ -19,13 +19,13 @@ const ProductItem = ({ data, className = "", search = false }) => {
     );
   }
   return (
-    <div className={` flex flex-col  ${!search && " max-h-[380px] md:max-h-[360px] lg:h-[330px] xl:h-[385px] min-w-[162px] xs:w-auto  "} ${className} items-stretch `}>
+    <div className={`col-span-1 flex flex-col  ${!search && " max-h-[390px] max-w-[235px] min-w-[162px] xs:w-auto  "} ${className} `}>
       <Link to={`/product/${data.id}`}>
         <img src={data.image} alt="" className="w-full" />
         <h4 className="capitalize">{data.title}</h4>
       </Link>
       {!search && (
-        <>
+        <div className='flex flex-col justify-end flex-1 '>
           <PackList
             data={data.type}
             className="flex-1 mb-3"
@@ -34,7 +34,7 @@ const ProductItem = ({ data, className = "", search = false }) => {
           <Button primary fluid onClick={() => handleAddCart(data)}>
             Add to cart
           </Button>
-        </>
+        </div>
       )}
     </div>
   );

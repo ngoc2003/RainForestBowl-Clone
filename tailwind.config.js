@@ -6,13 +6,15 @@ module.exports = {
   theme: {
     screens: {
       xl: "991px",
-      llg: "940px",
       lg: "800px",
       md: "600px",
-      sm:"400px",
-      xs:"360px",
+      sm: "400px",
     },
     extend: {
+      screens: {
+        xs: "360px",
+        llg: "940px",
+      },
       colors: {
         primary: "#A76E65",
         secondary: "#466732",

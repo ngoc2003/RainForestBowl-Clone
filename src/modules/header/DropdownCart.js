@@ -15,13 +15,13 @@ const DropdownCart = React.forwardRef((props, ref) => {
     <div
       {...other}
       ref={ref}
-      className="absolute right-0 top-full bg-white border border-lightGray shadow-lg w-[450px] min-h-[90px] flex flex-col items-center justify-center rounded-[3px] p-5 z-20"
+      className="absolute right-0 w-screen top-full bg-white border border-lightGray shadow-lg md:w-[450px] min-h-[90px] flex flex-col items-center justify-center rounded-[3px] p-5 z-20"
     >
       {data.length > 0 ? (
         <>
-          <div className="max-h-[200px] overflow-y-auto">
+          <div className="max-h-[200px] overflow-y-auto w-full">
             {data.map((item) => (
-              <ProductCartItem data={item} key={v4()}></ProductCartItem>
+              <ProductCartItem data={item} key={v4()} className='w-full'></ProductCartItem>
             ))}
           </div>
           <div className="w-full my-5 border-t border-t-lightGray ">
