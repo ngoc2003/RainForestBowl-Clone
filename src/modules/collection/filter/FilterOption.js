@@ -54,8 +54,8 @@ const FilterOption = ({ showMobile, onClick = () => {} }) => {
   return (
     <div>
       <div
-        className={`md:static absolute left-0 right-0 z-10 grid gap-5 p-5 bg-white opacity-0 md:opacity-100 ${
-          showMobile && "opacity-100 shadow-md"
+        className={`md:static absolute left-0 right-0  grid gap-5 p-5 bg-white opacity-0 md:opacity-100 ${
+          showMobile ? "opacity-100 shadow-md z-10" : '-z-10'
         }`}
         onClick={onClick}
       >
