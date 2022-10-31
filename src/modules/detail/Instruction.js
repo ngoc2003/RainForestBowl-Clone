@@ -5,13 +5,12 @@ import TabListData from "../../data/TabList";
 import { v4 } from "uuid";
 const Instruction = ({ categories }) => {
   const { care } = TabListData.find((tab) => tab.name === categories);
-  console.log(care);
   return (
     <BackgroundAttemp>
-      <div className="">
-        <div className="flex p-10 text-black bg-white rounded-xl gap-x-4">
+      <div >
+        <div className="flex flex-col justify-between p-10 text-black bg-white md:flex-row gap-x-2 rounded-xl">
           {care.map((instruction) => (
-            <div key={v4()} className=''>
+            <div key={v4()} className='flex flex-col justify-between'>
               <img src={instruction.image} className='max-w-full mx-auto' alt="" />
               <p className="mt-2 text-center">{instruction.text}</p>
             </div>

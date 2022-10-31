@@ -46,11 +46,11 @@ const Product = ({ data }) => {
     );
   }
   return (
-    <div className="flex gap-x-14 wrapper">
+    <div className="flex flex-col gap-x-14 wrapper lg:flex-row">
       <div className="flex-1">
         <img
           src={data && data.image}
-          className="max-w-[530px] mx-auto"
+          className="max-w-[530px] mx-auto "
           alt=""
         />
       </div>
@@ -78,7 +78,7 @@ const Product = ({ data }) => {
               "border text-black font-thin border-gray rounded-lg p-2 px-3  w-16"
             }
           ></Search>
-          <Button yellow creative className="text-xl" onClick={handleAddCart}>
+          <Button yellow creative className="sm:text-xl" onClick={handleAddCart}>
             Add to cart
           </Button>
         </div>

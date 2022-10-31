@@ -19,7 +19,7 @@ const ProductDetail = () => {
       <Product data={data}></Product>
       <Features></Features>
       <BackgroundCreative>
-        <div className="flex wrapper gap-x-8">
+        <div className="flex flex-col wrapper gap-x-8 lg:flex-row gap-y-5">
           <div className="flex-1">
             <img src={data.image} className="w-full" alt="" />
           </div>

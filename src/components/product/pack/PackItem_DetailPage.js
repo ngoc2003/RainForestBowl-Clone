@@ -14,7 +14,7 @@ const PackItemDetailPage = ({
       {!tab_table ? (
         <div
           onClick={onClick}
-          className={`cursor-pointer border-[2px] min-w-[150px] rounded-xl  min-h-[80px] bg-lightNude ${
+          className={`cursor-pointer border-[2px] md:min-w-[150px] rounded-xl  min-h-[80px] bg-lightNude min-w-[80px] ${
             active ? "border-font" : "border-transparent"
           }`}
         >
@@ -24,9 +24,9 @@ const PackItemDetailPage = ({
                 <Check></Check>
               </span>
             )}
-            <p className="text-sm font-thin ">{num_pack}</p>
-            <h4 className="text-xl font-semibold ">${price}</h4>
-            <p className="text-sm text-black">{`($${
+            <p className="text-xs font-thin sm:text-sm ">{num_pack}</p>
+            <h4 className="font-semibold xs:text-lg sm:text-xl ">${price}</h4>
+            <p className="text-xs text-black truncate sm:text-sm">{`($${
               price / num_pack.slice(0, 1)
             }/piece)`}</p>
             {children}

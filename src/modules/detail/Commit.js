@@ -6,7 +6,7 @@ const Commit = () => {
       {CommitData.map((commit) => (
         <div>
           <img src={commit.image} className='mx-auto' alt="" />
-          <p className="text-center text-sm font-semibold">{commit.text}</p>
+          <p className="text-sm font-semibold text-center">{commit.text}</p>
         </div>
       ))}
     </div>
