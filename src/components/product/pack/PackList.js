@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PackItem from "./PackItem";
 import PropTypes from "prop-types";
+import { v4 } from "uuid";
 
 const PackList = ({ data, className = "", setTypeData = () => {} }) => {
   const [activePack, setActivePack] = useState("");
@@ -32,6 +33,7 @@ const PackList = ({ data, className = "", setTypeData = () => {} }) => {
             onClick={(e) => handleActivePack(e, pack)}
             pack={pack}
             active={activePack}
+            key={v4()}
           ></PackItem>
         ))}
       </div>

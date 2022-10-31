@@ -11,9 +11,9 @@ const Video = ({ video_path = "8iHA3fDidT0" }) => {
         className="object-fill w-full h-full min-h-[250px] mx-auto"
         src={`https://www.youtube.com/embed/${video_path}`}
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allowFullScreen
       ></iframe>
       </div>
     </div>

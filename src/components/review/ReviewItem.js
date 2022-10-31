@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 } from "uuid";
 import Star from "../../icons/Star";
 
 const ReviewItem = ({ data }) => {
@@ -11,8 +12,8 @@ const ReviewItem = ({ data }) => {
         <div className="flex ">
           {Array(data.star)
             .fill(0)
-            .map((star) => (
-              <Star></Star>
+            .map(() => (
+              <Star key={v4()}></Star>
             ))}
         </div>
         <h4 className="text-xl font-semibold capitalize">{data.title}</h4>

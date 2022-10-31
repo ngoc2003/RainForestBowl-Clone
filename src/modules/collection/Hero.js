@@ -18,7 +18,7 @@ const Hero = () => {
         <h4 className="text-3xl font-semibold capitalize">{name}</h4>
         <div className={`text-black flex flex-col gap-y-2 min-[1000px]:text-lg font-thin ${description.length<=1 && 'list-none'}`}>
           {description.map((des) => (
-            <li>{des}</li>
+            <li key={des}>{des}</li>
           ))}
         </div>
       </div>
