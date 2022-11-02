@@ -20,7 +20,7 @@ const Offers = () => {
           <PrimaryText>Get 15% OFF</PrimaryText> on order $75+
         </span>
         <span>
-          Code: <span className="font-bold">150OFF</span>
+          Code: <span className="font-bold">15OFF</span>
         </span>
       </div>
       <Cell></Cell>

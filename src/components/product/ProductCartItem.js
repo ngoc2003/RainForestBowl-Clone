@@ -10,7 +10,7 @@ const ProductCartItem = ({ data, className }) => {
     dispatch(CartSlice.actions.remove(id));
   }
   return (
-    <div className="flex items-start justify-between w-full pr-2 my-2 text-black gap-x-3">
+    <div className={`flex items-start justify-between w-full pr-2 my-2 text-black gap-x-3 ${className}`}>
       <div className="flex gap-x-5">
         <img src={data.image} className="h-16" alt="" />
         <div>

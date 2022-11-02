@@ -2,12 +2,14 @@ import React from "react";
 
 const DiscountData = [
   {
-    code: "150off",
-    min: 150,
+    code: "15off",
+    discount:15/100,
+    min: 75,
   },
   {
     code: "20off",
-    min: 20,
+    discount:20/100,
+    min: 120,
   },
 ];
 

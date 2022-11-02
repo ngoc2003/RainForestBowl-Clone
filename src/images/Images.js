@@ -2,6 +2,9 @@ export const Images = {
   //common
   logo: require("./logo.svg").default,
   price_tag: require("./icon-pricing.webp"),
+  //payment
+  accepted: require('./payment/payment-accepted.avif'),
+  security: require('./payment/payment-security.avif'),
   //product
   woodenBowls_1: require("./product/wooden-bowls/ClassicCamwoodBowl-Small_360x.webp"),
   woodenBowls_2: require("./product/wooden-bowls/ClassicTeakWoodBowl-Regular-2_360x.webp"),
