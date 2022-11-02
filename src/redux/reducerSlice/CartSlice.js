@@ -1,15 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
-
+function setDataLocalStorage(result) {
+  localStorage.setItem("carts_rainforest", JSON.stringify(result));
+}
 const CartSlice = createSlice({
   name: "cart",
-  initialState: [],
+  initialState: localStorage.getItem("carts_rainforest")
+    ? JSON.parse(localStorage.getItem("carts_rainforest"))
+    : [],
   reducers: {
     add: (state, action) => {
       toast.success("Add successfully", {
         pauseOnHover: false,
         autoClose: 1000,
-        progressClassName: 'bg-primary',
+        progressClassName: "bg-primary",
       });
       let index = state.findIndex(
         (item) =>
@@ -24,15 +28,17 @@ const CartSlice = createSlice({
           amount: +state[index].amount + +action.payload.amount,
         };
       }
+      setDataLocalStorage(state);
     },
     remove: (state, action) => {
       toast.success("Remove successfully", {
         pauseOnHover: false,
         autoClose: 1000,
-        progressClassName: 'bg-primary',
+        progressClassName: "bg-primary",
       });
       let index = state.findIndex((item) => item.id === action.payload);
       state.splice(index, 1);
+      setDataLocalStorage(state);
     },
   },
 });

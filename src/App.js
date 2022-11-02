@@ -9,6 +9,7 @@ import LayoutDefault from "./layouts/LayoutDefault";
 const Homepage = lazy(() => import("./pages/Homepage"));
 const ProductDetail = lazy(() => import("./pages/ProductDetail"));
 const Collection = lazy(() => import("./pages/Collection"));
+const CartPage = lazy(() => import("./pages/CartPage"));
 const Error = lazy(() => import("./components/Error"));
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           ></Route>
           <Route path="/" element={<Homepage />}></Route>
           <Route path="/product/:productId" element={<ProductDetail />}></Route>
+          <Route path="/cart" element={<CartPage />}></Route>
         </Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
