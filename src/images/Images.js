@@ -5,6 +5,10 @@ export const Images = {
   //payment
   accepted: require('./payment/payment-accepted.avif'),
   security: require('./payment/payment-security.avif'),
+  amazonPay: require('./payment/amazonPay.svg').default,
+  googlePay: require('./payment/googlePay.svg').default,
+  paypalPay: require('./payment/paypalPay.svg').default,
+  shopPay: require('./payment/shopPay.svg').default,
   //product
   woodenBowls_1: require("./product/wooden-bowls/ClassicCamwoodBowl-Small_360x.webp"),
   woodenBowls_2: require("./product/wooden-bowls/ClassicTeakWoodBowl-Regular-2_360x.webp"),

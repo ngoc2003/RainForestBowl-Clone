@@ -8,7 +8,7 @@
 }
 @layer base {
   body {
-    @apply text-sm xl:text-base font-normal text-black font-sans;
+    @apply text-sm xl:text-base font-normal text-black font-sans ;
   }
   input {
     @apply outline-none;

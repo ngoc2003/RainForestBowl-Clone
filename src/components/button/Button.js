@@ -10,9 +10,11 @@ const Button = ({
   creative = false,
   className,
   yellow = false,
+  blue = false,
   fluid = false,
   outline = false,
   to = "",
+  background = "gray",
   onClick = () => {},
   ...props
 }) => {
@@ -21,7 +23,11 @@ const Button = ({
       {...props}
       onClick={onClick}
       type={type}
-      style={{ fontSize: "14px", width: `${fluid ? "100%" : "auto"}` }}
+      style={{
+        fontSize: "14px",
+        width: `${fluid ? "100%" : "auto"}`,
+        backgroundColor: `${background}`,
+      }}
       className={`hover:bg-opacity-90  capitalize rounded-[3px] text-white py-2  font-bold flex items-center justify-center gap-x-2 duration-200  ${
         primary
           ? "bg-primary"
@@ -30,8 +36,10 @@ const Button = ({
           : yellow
           ? "bg-yellow text-font"
           : outline
-          ? "text-font border-font border font-medium"
-          : "bg-gray"
+          ? "text-font border-font border font-medium bg-transparent"
+          : blue
+          ? "bg-blue"
+          : ""
       }  ${creative ? "hover:px-4 px-5 origin-center" : "px-4"} ${className}`}
     >
       {children}
@@ -40,7 +48,7 @@ const Button = ({
   return (
     <>
       {to ? (
-        <Link to={to} style={{width: `${fluid ? "100%" : "auto"}` }} >
+        <Link to={to} style={{ width: `${fluid ? "100%" : "auto"}` }}>
           {btn}
         </Link>
       ) : (

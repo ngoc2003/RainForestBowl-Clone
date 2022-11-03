@@ -4,7 +4,7 @@ import "swiper/css/navigation";
 import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import LayoutDefault from "./layouts/LayoutDefault";
-
+import { useNavigate } from "react-router-dom";
 // Page
 const Homepage = lazy(() => import("./pages/Homepage"));
 const ProductDetail = lazy(() => import("./pages/ProductDetail"));
@@ -25,8 +25,8 @@ function App() {
           <Route path="/" element={<Homepage />}></Route>
           <Route path="/product/:productId" element={<ProductDetail />}></Route>
           <Route path="/cart" element={<CartPage />}></Route>
-          <Route path="/checkout" element={<CheckoutPage />}></Route>
         </Route>
+        <Route path="/checkout/cart" element={<CheckoutPage />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
     </Suspense>

@@ -15,7 +15,7 @@ const Search = ({
     <div
       className={`${
         icon && "z-10"
-      }   text-font flex gap-x-2 items-center ${className} h-full`}
+      }    flex gap-x-2 items-center ${className} h-full`}
     >
       <input
         type="text"
