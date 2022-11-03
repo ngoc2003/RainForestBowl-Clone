@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import logo from "../../images/logo.svg";
 import logoText from "../../images/logoText.svg";
@@ -27,6 +27,7 @@ const Topbar = ({ showLogoText }) => {
   function handleToggleListCart() {
     setShowListCart(!showListCart);
   }
+  console.log(showListCart);
   window.addEventListener("scroll", () => {
     setShowListCart(false);
     setShowSideBar(false);
@@ -37,7 +38,7 @@ const Topbar = ({ showLogoText }) => {
     setShowSideBar(true);
   }
   return (
-    <div className="flex items-center justify-between py-8 bg-white border-b xl:py-5 xl:justify-start gap-x-10 wrapper border-b-borderColor">
+    <div className="relative flex items-center justify-between py-8 bg-white border-b xl:py-5 xl:justify-start gap-x-10 wrapper border-b-borderColor">
       <Bar
         className="cursor-pointer xl:hidden"
         onClick={handleToggleSideBar}
