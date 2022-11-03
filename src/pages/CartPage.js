@@ -11,15 +11,9 @@ import Total from "../modules/cartpage/Total";
 import { Images } from "../images/Images";
 const CartPage = () => {
   const cartList = useSelector(cartUserSelector);
-  const [code, setCode] = useState("");
-  const handleSetCode = useCallback((e) => {
-    setCode(e.target.value);
-  }, []);
-  function handleApplyCode() {}
-
   return (
-    <ScrollToTop className="flex flex-col lg:grid lg:grid-cols-4 gap-8  py-8 wrapper">
-      <div className="xxl:col-span-3 col-span-2 mb-5">
+    <ScrollToTop className="flex flex-col gap-8 py-8 lg:grid lg:grid-cols-4 wrapper">
+      <div className="col-span-2 mb-5 xxl:col-span-3">
         <h4 className={"text-xl font-semibold "} center={false}>
           Your Cart ({cartList.length} items)
         </h4>
@@ -29,16 +23,16 @@ const CartPage = () => {
             <ProductCartItem
               data={item}
               key={v4()}
-              className="w-full border-b border-b-borderColor py-5"
+              className="w-full py-5 border-b border-b-borderColor"
             ></ProductCartItem>
           ))}
         </div>
       </div>
-      <div className="col-span-2 xxl:col-span-1  ">
-        <div className="border border-lightGray px-4 py-5">
+      <div className="col-span-2 xxl:col-span-1 ">
+        <div className="px-4 py-5 border border-lightGray">
           <Total></Total>
 
-          <Button yellow fluid>
+          <Button yellow fluid to='/checkout/information'>
             Proceed to checkout
           </Button>
           <div className="flex flex-col gap-3 mt-3">

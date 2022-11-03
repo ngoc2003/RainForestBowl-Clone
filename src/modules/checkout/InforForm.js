@@ -35,7 +35,7 @@ const InforForm = () => {
       validationSchema={Yup.object({})}
       onSubmit={(values) => {
         console.log(values);
-        navigate('/checkout/payment')
+        navigate('/checkout/payment', { replace: true, state: {...values} })
       }}
     >
       {({ errors, touched, setFieldValue }) => {

@@ -30,7 +30,7 @@ const DropdownCart = React.forwardRef((props, ref) => {
             <Button to="/cart" fluid className={"lg:text-lg"} outline>
               View my cart
             </Button>
-            <Button fluid className={"lg:text-lg"} primary>
+            <Button to='/checkout/information' fluid className={"lg:text-lg"} primary>
               Check out now
             </Button>
           </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 const progress = [
   {
     name: "cart",
@@ -14,8 +15,7 @@ const progress = [
   },
 ];
 const Navi = () => {
-  const location = window.location.pathname;
-
+  const {pathname} = useLocation()
   return (
     <>
       <h4 className="pt-10 mb-5 text-2xl wrapper">Rainforest Bowl</h4>
@@ -24,7 +24,7 @@ const Navi = () => {
           <>
             <span
               key={item.name}
-              className={`  ${location === item.path && "text-blue"}`}
+              className={`  ${pathname === item.path && "text-blue"}`}
             >
               {item.name}
             </span>

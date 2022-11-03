@@ -5,7 +5,7 @@ import { cartUserSelector } from "../../redux/selector";
 
 const Total = () => {
   const cartList = useSelector(cartUserSelector);
-  const shippingCost = 5;
+  const shippingCost = 20;
   const price = cartList
     .reduce(
       (accumulator, item) => accumulator + item.amount * item.type.cost,
@@ -22,7 +22,7 @@ const Total = () => {
         <span>Subtotal:</span>
         <span className="font-semibold">${price}</span>
       </div>
-      <div className="flex justify-between mt-2   text-red items-center  ">
+      <div className="flex items-center justify-between mt-2 text-red ">
         <span>
           Discount saving:{" "}
           <span className="bg-lightNude ml-5 w-4 h-1 text-[10px] py-1 pr-2 text-[#000] relative rounded-r-xl ">
