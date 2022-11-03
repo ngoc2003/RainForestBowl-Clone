@@ -3,6 +3,7 @@ import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import Search from "../../components/search/Search";
 import Button from "../../components/button/Button";
+import { Navigate, useNavigate } from "react-router-dom";
 function SearchInput({ className, ...props }) {
   return (
     <div
@@ -13,6 +14,7 @@ function SearchInput({ className, ...props }) {
   );
 }
 const InforForm = () => {
+    const navigate = useNavigate()
   const [agree, setAgree] = useState(false);
   function handleSetAgree() {
     setAgree(!agree);
@@ -33,6 +35,7 @@ const InforForm = () => {
       validationSchema={Yup.object({})}
       onSubmit={(values) => {
         console.log(values);
+        navigate('/checkout/payment')
       }}
     >
       {({ errors, touched, setFieldValue }) => {
@@ -107,7 +110,7 @@ const InforForm = () => {
                 {"< Return to cart"}
               </a>
               <Button blue type="submit" fluid className="max-w-[200px]">
-                Submit
+                Continue to payment
               </Button>
             </div>
           </Form>

@@ -1,20 +1,15 @@
-import React, { useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { v4 } from "uuid";
-import Button from "../components/button/Button";
-import Search from "../components/search/Search";
-import InforForm from "../modules/checkout/InforForm";
+import React, {useState, useRef} from "react";
+import { Outlet } from "react-router-dom";
+import { withErrorBoundary } from "react-error-boundary";
+import Error from "../components/Error";
+import Navi from "../modules/checkout/Navi";
 import ExpressPaymentData from "../data/ExpressPayment";
-import DropdownCart from "../modules/header/DropdownCart";
 import { useSelector } from "react-redux";
 import { cartUserSelector } from "../redux/selector";
-import ProductCartItem from "../components/product/ProductCartItem";
-import Total from "../modules/cartpage/Total";
-import Navi from "../modules/checkout/Navi";
 import Cart from "../icons/Cart";
+import Total from "../modules/cartpage/Total";
 
-const CheckoutPage = () => {
-  ExpressPaymentData.map((item) => console.log(item));
+const LayoutPayment = () => {
   const productListRef = useRef();
   const [showList, setShowList] = useState(false);
   const data = useSelector(cartUserSelector);
@@ -22,7 +17,7 @@ const CheckoutPage = () => {
     <div className="text-[#000] ">
       <Navi></Navi>
       <div
-        className="flex gap-3 py-8 text-sm border-b cursor-pointer text-blue wrapper border-b-lightGray"
+        className="flex gap-3 py-8 text-sm border-b cursor-pointer text-blue wrapper border-b-lightGray  min-[900px]:hidden "
         onClick={() => setShowList(!showList)}
       >
         <Cart></Cart>
@@ -61,37 +56,15 @@ const CheckoutPage = () => {
               showList ? productListRef.current.offsetHeight : 0
             }px `,
           }}
-          className="absolute left-0 right-0 z-20 flex-1 py-10 duration-300 bg-white border-r border-r-lightGray wrapper"
+          className="absolute min-[900px]:static left-0 right-0 bottom-0 z-20 flex-1 py-10 duration-300 bg-white border-r border-r-lightGray wrapper"
         >
-          {/* Progress */}
-
-          {/* Express */}
-          <div className="relative border border-lightGray rounded-[3px] mb-8">
-            <span className="absolute px-3 text-sm -translate-x-1/2 bg-white -top-3 left-1/2">
-              Express checkout
-            </span>
-            <div className="flex gap-3 p-5 ">
-              {ExpressPaymentData.map((item) => (
-                <Button key={v4()} className="flex-1 " background={item.color}>
-                  <img
-                    src={item.image}
-                    className="h-full max-h-[24px]"
-                    alt=""
-                  />
-                </Button>
-              ))}
-            </div>
-          </div>
-          <div className="relative mb-8 border-b border-b-lightGray">
-            <span className="absolute px-3 text-sm -translate-x-1/2 bg-white -top-3 left-1/2">
-              OR
-            </span>
-          </div>
-          <InforForm></InforForm>
+      <Outlet></Outlet>
         </div>
       </div>
+
     </div>
+
   );
 };
 
-export default CheckoutPage;
+export default withErrorBoundary(LayoutPayment, { FallbackComponent: Error });

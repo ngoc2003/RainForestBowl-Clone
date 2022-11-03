@@ -9,10 +9,6 @@ const progress = [
     path: "/checkout/information",
   },
   {
-    name: "shipping",
-    path: "/checkout/shipping",
-  },
-  {
     name: "payment",
     path: "/checkout/payment",
   },
