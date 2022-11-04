@@ -48,7 +48,7 @@ const Button = ({
   return (
     <>
       {to ? (
-        <Link to={to} style={{ width: `${fluid ? "100%" : "auto"}` }}>
+        <Link to={to} style={{ width: `${fluid ? "100%" : "auto"}` }} {...props}>
           {btn}
         </Link>
       ) : (
