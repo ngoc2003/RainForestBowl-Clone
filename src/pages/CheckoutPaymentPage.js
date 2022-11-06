@@ -2,10 +2,12 @@ import React from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Button from "../components/button/Button";
-
+import { useDispatch } from "react-redux";
+import CartSlice from "../redux/reducerSlice/CartSlice";
 const CheckoutPaymentPage = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
+  const dispatch = useDispatch();
   function handlePay() {
     toast.success("Buy successfully", {
       pauseOnHover: false,
@@ -14,6 +16,7 @@ const CheckoutPaymentPage = () => {
     });
     setTimeout(() => {
       navigate("/");
+      dispatch(CartSlice.actions.clear());
     }, 2000);
   }
   return (

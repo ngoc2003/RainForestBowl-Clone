@@ -46,7 +46,9 @@
   .wrapper {
     padding: 0 4%;
   }
-
+  .error {
+    @apply text-xs md:text-sm text-red;
+  }
   .link-hover {
     @apply duration-300 xl:hover:font-bold cursor-pointer relative;
     &::after {

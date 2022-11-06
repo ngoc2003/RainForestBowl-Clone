@@ -48,9 +48,9 @@ const Topbar = ({ showLogoText }) => {
         className="absolute flex-1 -translate-x-1/2 left-1/2 xl:top-3 xl:translate-x-0 xl:left-[4%] w-[100px] xs:w-auto"
       >
         {showLogoText ? (
-          <img className="w-full mx-auto" src={logoText} alt="" />
+          <img className="w-full mx-auto " src={logoText} alt="" />
         ) : (
-          <img className="w-full mx-auto" src={logo} alt="" />
+          <img className="w-full mx-auto xl:-translate-y-9" src={logo} alt="" />
         )}
       </Link>
       <div className="xl:block w-[200px] hidden"></div>

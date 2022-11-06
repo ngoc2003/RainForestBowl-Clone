@@ -24,7 +24,7 @@ const Search = ({
         defaultValue={""}
         value={value}
         placeholder={placeholder}
-        className={`bg-transparent placeholder:text-lightGray ${
+        className={`bg-transparent placeholder:text-lightGray  ${
           right && "text-right"
         } outline-none w-full`}
       />

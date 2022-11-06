@@ -11,6 +11,7 @@ const DiscountData = [
     discount:20/100,
     min: 120,
   },
+
 ];
 
 export default DiscountData;

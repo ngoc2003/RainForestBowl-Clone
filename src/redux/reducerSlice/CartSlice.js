@@ -40,6 +40,10 @@ const CartSlice = createSlice({
       state.splice(index, 1);
       setDataLocalStorage(state);
     },
+    clear: (state, action) => {
+      state.splice(0, state.length);
+      setDataLocalStorage(state);
+    },
   },
 });
 export default CartSlice;
