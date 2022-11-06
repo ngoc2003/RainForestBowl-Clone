@@ -5,7 +5,7 @@ import PrimaryText from "../../components/PrimaryText";
 import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Offers = () => {
-  const mobile = useMediaQuery("(max-width: 550px )");
+  const mobile = useMediaQuery("(max-width: 600px )");
   return !mobile ? (
     <div className="flex flex-wrap justify-around py-3 text-sm border-b shadow-md wrapper border-b-borderColor gap-y-5">
       <div className="flex flex-col items-center ">
