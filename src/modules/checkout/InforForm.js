@@ -51,7 +51,7 @@ const InforForm = () => {
       {({ errors, touched, setFieldValue }) => {
         return (
           <Form>
-            <div className="flex flex-col mb-8 gap-y-5">
+            <div className="flex flex-col pb-8 gap-y-5">
               <h4 className="text-lg ">Contact Information</h4>
               <div>
                 <SearchInput

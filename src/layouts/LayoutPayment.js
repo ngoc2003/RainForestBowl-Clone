@@ -1,4 +1,4 @@
-import React, {useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import { Outlet } from "react-router-dom";
 import { withErrorBoundary } from "react-error-boundary";
 import Error from "../components/Error";
@@ -14,7 +14,7 @@ const LayoutPayment = () => {
   const [showList, setShowList] = useState(false);
   const data = useSelector(cartUserSelector);
   return (
-    <div className="text-[#000] ">
+    <div className="text-[#000]">
       <Navi></Navi>
       <div
         className="flex gap-3 py-8 text-sm border-b cursor-pointer text-blue wrapper border-b-lightGray  min-[900px]:hidden "
@@ -52,18 +52,14 @@ const LayoutPayment = () => {
         </div>
         <div
           style={{
-            top: `${
-              showList ? productListRef.current.offsetHeight : 0
-            }px `,
+            top: `${showList ? productListRef.current.offsetHeight : 0}px `,
           }}
           className="absolute min-[900px]:static left-0 right-0 bottom-0 z-20 flex-1 py-10 duration-300 bg-white border-r border-r-lightGray wrapper"
         >
-      <Outlet></Outlet>
+          <Outlet></Outlet>
         </div>
       </div>
-
     </div>
-
   );
 };
 
