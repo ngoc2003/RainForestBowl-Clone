@@ -3,10 +3,11 @@ import { v4 } from "uuid";
 import Button from "../components/button/Button";
 import InforForm from "../modules/checkout/InforForm";
 import ExpressPaymentData from "../data/ExpressPayment";
+import FramerPayment from "../layouts/framer-motion/FramerPayment";
 
 const CheckoutInfoPage = () => {
   return (
-    <>
+    <FramerPayment>
       <div className="relative border border-lightGray rounded-[3px] mb-8">
         <span className="absolute px-3 text-sm -translate-x-1/2 bg-white -top-3 left-1/2">
           Express checkout
@@ -25,7 +26,7 @@ const CheckoutInfoPage = () => {
         </span>
       </div>
       <InforForm></InforForm>
-    </>
+    </FramerPayment>
   );
 };
 

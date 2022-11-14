@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.12",
     "formik": "^2.2.9",
+    "framer-motion": "^7.6.6",
     "interweave": "^13.0.0",
     "postcss": "^8.4.18",
     "prop-types": "^15.8.1",

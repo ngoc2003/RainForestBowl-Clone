@@ -3,6 +3,7 @@ import Filter from "../modules/collection/Filter";
 import Hero from "../modules/collection/Hero";
 import Line from "../components/Line";
 import Coupon from "../modules/homepage/Coupon";
+import FramerDefault from "../layouts/framer-motion/FramerDefault";
 const Collection = () => {
   useEffect(() => {
     window.scrollTo({
@@ -11,12 +12,12 @@ const Collection = () => {
   }, []);
 
   return (
-    <div className="grid gap-8">
+    <FramerDefault className="grid gap-8">
       <Hero></Hero>
       <Line></Line>
       <Filter></Filter>
       <Coupon></Coupon>
-    </div>
+    </FramerDefault>
   );
 };
 
