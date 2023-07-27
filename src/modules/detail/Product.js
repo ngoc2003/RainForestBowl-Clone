@@ -23,7 +23,6 @@ const Product = ({ data }) => {
   function handleSetActivePack_table(e, in4) {
     setActivePack_table(e.target.innerHTML.toLowerCase());
     setShowInfo(in4);
-    console.log(e.target.innerHTML.toLowerCase());
   }
   function handleActivePack({ name, cost }) {
     setActivePack(name);
@@ -78,7 +77,12 @@ const Product = ({ data }) => {
               "border text-black font-thin border-gray rounded-lg p-2 px-3  w-16"
             }
           ></Search>
-          <Button yellow creative className="sm:text-xl" onClick={handleAddCart}>
+          <Button
+            yellow
+            creative
+            className="sm:text-xl"
+            onClick={handleAddCart}
+          >
             Add to cart
           </Button>
         </div>

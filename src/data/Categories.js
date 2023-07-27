@@ -23,19 +23,19 @@ const CategoriesData = [
     categories: "wooden bowls",
     hightlight: [
       {
-        title: "rustic feel",
+        name: "rustic feel",
         text: " Lustrous camwood with fine grain and patterns add a rustic look and feel to your meals",
       },
       {
-        title: "RARE ARTISANAL PIECE",
+        name: "RARE ARTISANAL PIECE",
         text: "Handmade by master artisans in Vietnam",
       },
       {
-        title: "NATURALLY BEAUTIFUL AND FUNCTIONAL",
+        name: "NATURALLY BEAUTIFUL AND FUNCTIONAL",
         text: " Camwood is known for its deep red, orange, and brownish-red hues",
       },
       {
-        title: "GREAT FOR SERVING FOOD",
+        name: "GREAT FOR SERVING FOOD",
         text: "The hand carved rim keeps food inside the bowl to prevent spillage",
       },
     ],
@@ -50,19 +50,19 @@ const CategoriesData = [
     id: id++,
     hightlight: [
       {
-        title: "RARE ARTISANAL PIECE",
+        name: "RARE ARTISANAL PIECE",
         text: "Handmade by master artisans in Indonesia",
       },
       {
-        title: "TIMELESS LOOK",
+        name: "TIMELESS LOOK",
         text: "Carries the golden brown colors and lovely grain of teak",
       },
       {
-        title: "ELEVATE YOUR RECIPES",
+        name: "ELEVATE YOUR RECIPES",
         text: "Carved from teak wood to the shape of a large-sized bowl",
       },
       {
-        title: "IDEAL FOR MODERN KITCHENS",
+        name: "IDEAL FOR MODERN KITCHENS",
         text: "Great for enjoying salads and other bowl recipes, holding odds and ends, or gifting to a loved one",
       },
     ],
@@ -392,20 +392,20 @@ const CategoriesData = [
     hightlight: [
       {
         name: "ELEVATE YOUR RECIPES",
-        title:
+        text:
           "Includes one round plate carved to the shape of a pizza board with a handle",
       },
       {
         name: "RARE ARTISANAL PIECE",
-        title: "Handmade by master artisans in Indonesia",
+        text: "Handmade by master artisans in Indonesia",
       },
       {
         name: "TIMELESS LOOK",
-        title: "Carries the golden brown colors and lovely grain of teak",
+        text: "Carries the golden brown colors and lovely grain of teak",
       },
       {
         name: "IDEAL FOR MODERN KITCHENS",
-        title:
+        text:
           "Great for enjoying desserts, appetizers, and small servings of meals, holding odds and ends, or gifting to a loved one",
       },
     ],
@@ -443,19 +443,19 @@ const CategoriesData = [
     hightlight: [
       {
         name: "ELEVATE YOUR RECIPES",
-        title: "Carved to the shape of a round rimmed plate",
+        text: "Carved to the shape of a round rimmed plate",
       },
       {
         name: "RARE ARTISANAL PIECE",
-        title: "Handmade by master artisans in Indonesia",
+        text: "Handmade by master artisans in Indonesia",
       },
       {
         name: "TIMELESS LOOK",
-        title: "Carries the golden brown colors and lovely grain of teak",
+        text: "Carries the golden brown colors and lovely grain of teak",
       },
       {
         name: "IDEAL FOR MODERN KITCHENS",
-        title:
+        text:
           "Great for serving small pizzas or other meals, holding odds and ends, or gifting to a loved one",
       },
     ],
